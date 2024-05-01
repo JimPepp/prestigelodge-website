@@ -9,6 +9,8 @@
 }
 
 :root {
+  font-size: 16px;
+
   --text-50: #f5f2f0;
   --text-100: #eae5e1;
   --text-200: #d5cac3;
@@ -69,17 +71,18 @@
   --accent-900: #2b2508;
   --accent-950: #161204;
 
-  --linearPrimarySecondary: linear-gradient(#f2e866, #795E4E);
+  --linearPrimarySecondary: linear-gradient(#f2e866, #795e4e);
   --linearPrimaryAccent: linear-gradient(#f2e866, #e5cf6e);
-  --linearSecondaryAccent: linear-gradient(#795E4E, #e5cf6e);
-  --radialPrimarySecondary: radial-gradient(#f2e866, #795E4E);
+  --linearSecondaryAccent: linear-gradient(#795e4e, #e5cf6e);
+  --radialPrimarySecondary: radial-gradient(#f2e866, #795e4e);
   --radialPrimaryAccent: radial-gradient(#f2e866, #e5cf6e);
-  --radialSecondaryAccent: radial-gradient(#795E4E, #e5cf6e);
+  --radialSecondaryAccent: radial-gradient(#795e4e, #e5cf6e);
 }
 
 body {
   color: var(--text-800);
   background: var(--background-50);
+  overflow-x: hidden;
 }
 
 html {
@@ -122,26 +125,35 @@ p {
   /* 24px */
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: capitalize;
 }
 
+/* ================ */
+/* HEADER COMPONENT */
+/* ================ */
+
 .header {
   border-color: var(--text-950);
+  justify-content: left;
 }
 
 .line {
   border-color: var(--text-800);
 }
 
-.burger:hover > .line{
+.burger:hover > .line {
   border-color: var(--accent-500);
 }
 
-.stickyHeader{
+.stickyHeader {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
@@ -160,4 +172,34 @@ h2, h3, h4, h5, h6 {
   &--scrolled {
     height: 40px;
   }
+}
+
+.menu {
+  background-color: var(--background-50);
+  text-align: left;
+  
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  left: -3000px;
+  top: 100px;
+}
+
+.menu-image{
+  width:1580px;
+  height: 980px;
+  position: relative;
+}
+
+.menu-image > img {
+  border: 3px solid var(--accent-500);
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.nav-item:hover{
+  color: var(--accent-500);
+  cursor: pointer;
 }
