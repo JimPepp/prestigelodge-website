@@ -146,7 +146,7 @@ h6 {
   border-color: var(--text-800);
 }
 
-.burger:hover > .line {
+.burger:hover>.line {
   border-color: var(--accent-500);
 }
 
@@ -169,6 +169,7 @@ h6 {
   left: 0;
   top: 0;
   transition: ease 0.4s;
+
   &--scrolled {
     height: 40px;
   }
@@ -177,7 +178,7 @@ h6 {
 .menu {
   background-color: var(--background-50);
   text-align: left;
-  
+
   display: flex;
   position: fixed;
   justify-content: space-between;
@@ -187,19 +188,32 @@ h6 {
   top: 100px;
 }
 
-.menu-image{
-  width:1580px;
+.menu-image {
+  width: 1580px;
   height: 980px;
   position: relative;
 }
 
-.menu-image > img {
+.menu-image>img {
   border: 3px solid var(--accent-500);
   object-fit: cover;
   object-position: 50% 50%;
 }
 
-.nav-item:hover{
+.menu-image-txt {
+  color: var(--accent-50);
+  text-shadow: 0px 0px 7px var(--text-900);
+}
+
+.nav-item:hover {
   color: var(--accent-500);
   cursor: pointer;
+}
+
+.logo {
+  justify-content: right;
+}
+
+.logo.recenter {
+  justify-content: center;
 }

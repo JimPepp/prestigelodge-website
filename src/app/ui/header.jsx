@@ -1,7 +1,13 @@
 "use client";
 
-import { Fh1, Fh2h3 } from "@/app/modules/fonts";
-import { gsap, useGSAP, ScrollTrigger, TextPlugin } from "../modules/gsap";
+import { Fh1, Fh2h3, Fh6 } from "@/app/modules/fonts";
+import {
+  gsap,
+  useGSAP,
+  ScrollTrigger,
+  TextPlugin,
+  Flip,
+} from "../modules/gsap";
 import { useRef } from "react";
 import Image from "next/image";
 import $ from "jquery";
@@ -10,17 +16,8 @@ var menuIsOpen = false;
 
 export default function Header() {
   const main = useRef();
-  var currentLayout = "justify-end";
-  var logoFlexbox = $("#logoContainer");
 
   useGSAP(() => {
-    let logoAnimation = gsap.to(".logo", {
-      duration: 1.7, // the whole menu must slide in from the left with the same duration
-      xPercent: -360, // Use the flip plugin
-      ease: "power1.in(1.7)",
-      paused: true,
-    });
-
     let headerBorder = gsap.to(".header", {
       css: {
         borderColor: "#f5f5f0",
@@ -35,7 +32,7 @@ export default function Header() {
       paused: true,
       text: "close",
       ease: "none",
-      delay: 0.5,
+      delay: 1,
     });
 
     let burgerToX = [
@@ -69,8 +66,6 @@ export default function Header() {
       paused: true,
       duration: 1.7,
       ease: "sine",
-      // start: "top top",
-      // end: "max",
     });
 
     const showAnim = gsap
@@ -89,16 +84,37 @@ export default function Header() {
       },
     });
 
+    function recenterLogo() {
+      // get the logo container
+      const logo = document.querySelector(".logo");
+      // get the state of the logo
+      const state = Flip.getState(".logo");
+      // toggle the content justification of the logo
+      logo.classList.toggle("recenter");
+    }
+
+    let logoAnim = gsap.timeline({ repeat: 0, paused: true });
+    logoAnim.to(".logo", {
+      opacity: 0,
+      duration: 0.15,
+      ease: "sine",
+    });
+    logoAnim.to(".logo", {
+      opacity: 1,
+      delay: 1,
+      duration: 1,
+      ease: "expo.inOut",
+      onStart: recenterLogo,
+    });
+
     document.querySelector("#burgerIcon").onclick = () => {
+      // boolean to identify the state of the menu
       menuIsOpen = !menuIsOpen;
 
-      // Remove the 
-      logoFlexbox.removeClass(currentLayout);
-      console.log("removed class" + currentLayout);
-
       if (menuIsOpen) {
-        currentLayout = "justify-center"
-        // logoAnimation.play();
+        // Set animation to frame 0 and play
+        logoAnim.play();
+        logoAnim.seek(0);
         headerBorder.play();
         headerMenuText.play();
         headerTrigger.disable();
@@ -107,8 +123,9 @@ export default function Header() {
         burgerToX[2].play();
         menuContainer.play();
       } else {
-        currentLayout = "justify-end";
-        // logoAnimation.reverse();
+        // Set animation to frame 0 and play
+        logoAnim.play();
+        logoAnim.seek(0);
         headerBorder.reverse();
         headerMenuText.reverse();
         headerTrigger.enable();
@@ -117,11 +134,6 @@ export default function Header() {
         burgerToX[2].reverse();
         menuContainer.reverse();
       }
-
-      logoFlexbox.addClass(currentLayout);
-      console.log("added class" + currentLayout);
-
-
     };
   });
 
@@ -129,8 +141,8 @@ export default function Header() {
     <>
       <header className="main-tool-bar z-40">
         <div className="w-full flex flex-row-reverse items-center pl-24 pr-24 flex-nowrap m-0 p-0 border-2 header">
-          <div className="w-full flex justify-end" id="logoContainer">
-            <h1 className={`${Fh1.className} logo`}>Prestige Lodge</h1>
+          <div className="w-full flex logo">
+            <h1 className={`${Fh1.className}`}>Prestige Lodge</h1>
           </div>
           <div className="flex flex-row items-center justify-center">
             <button className="cursor-pointer pr-4" id="burgerIcon">
@@ -154,8 +166,17 @@ export default function Header() {
           <h6 className={`${Fh2h3.className} nav-item mb-14`}>Contact us</h6>
         </div>
         <div className="menu-image">
+          <h3
+            className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
+          >
+            Hotels
+          </h3>
           <Image
+            className="relative z-40"
             src="/hotel-pool-pexels.png"
+            // fill = true adjusts the image dimations to the div
+            // use along-side with object-fit and object-position for correct aspect ratio!
+            // check : golbals.css @ 197
             fill={true}
             alt="Picture of a pool in a hotel, surrounded by a spruce deck. Various trees behind the deck and sea in the far background"
           />
