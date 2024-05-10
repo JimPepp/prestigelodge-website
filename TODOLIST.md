@@ -4,8 +4,12 @@
 - The header logo animation currently runs pixel-based. Update it to animate based on justify-content. (DONE)
 - Double clicking on the menu is breaking the alignment of the logo (DONE)
 - Responsive design (DONE)
-- Observer / ScrollTrigger.observe() on the menu image section.
-- Second section does not load the image.
+- Observer / ScrollTrigger.observe() on the menu image section. (DONE)
+- Second section does not load the image. (DONE)
+- Reconstruct the HTML in the image scroll. Get the text outside and set it to animate using the Text plugin.
+
+## Footer
+- None currently.
 
 ## Home Page
 ### Intro Section

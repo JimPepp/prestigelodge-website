@@ -1,6 +1,6 @@
 "use client";
 
-import { Fh1, Fh2h3, Fh6, Fparagraph } from "@/app/modules/fonts";
+import { Fh1, Fh2h3, Fh6, Fparagraph } from "../modules/fonts";
 import {
   gsap,
   useGSAP,
@@ -12,19 +12,21 @@ import Image from "next/image";
 import { useRef } from "react";
 import $ from "jquery";
 
+// By default the menu is closed
 var menuIsOpen = false;
 
+// This function simply gets the logo and toggles the recenter class.
+// For more info check globals.css and below
 function recenterLogo() {
   // get the logo container
   const logo = document.querySelector(".logo");
-  // get the state of the logo
-  // const state = Flip.getState(".logo");
   // toggle the content justification of the logo
   logo.classList.toggle("recenter");
 }
 
 export default function Header() {
   useGSAP(() => {
+    // Animation that controlls the header border color
     let headerBorder = gsap.to(".header", {
       css: {
         borderColor: "#f5f5f0",
@@ -34,6 +36,7 @@ export default function Header() {
       paused: true,
     });
 
+    // Transforming the "MENU" text in the header to "CLOSED"
     let headerMenuText = gsap.to("#menuText", {
       duration: 0.3,
       paused: true,
@@ -43,6 +46,8 @@ export default function Header() {
       reversed: true,
     });
 
+    // Array of animations for each line of the
+    // burger, turning it to an "X"
     let burgerToX = [
       gsap.to(".line1", {
         // line 1 rotates 45
@@ -69,6 +74,7 @@ export default function Header() {
       }),
     ];
 
+    // Slide the menu in, when the user clicks on the burger
     const menuContainer = gsap.to(".menu", {
       left: 0,
       paused: true,
@@ -76,6 +82,8 @@ export default function Header() {
       ease: "sine",
     });
 
+    // The element with class .main-tool-bar is the header.
+    // This is the animation that hides / shows the header.
     const showAnim = gsap
       .from(".main-tool-bar", {
         yPercent: -100,
@@ -84,6 +92,8 @@ export default function Header() {
       })
       .progress(1);
 
+    // This scroll trigger checks if the user is scrolling down or up to display 
+    // the header accordingly (scrolling down hides the header, scrolling up displays it)
     const headerTrigger = ScrollTrigger.create({
       start: "top top",
       end: "max",
@@ -92,6 +102,7 @@ export default function Header() {
       },
     });
 
+    // Timeline to controll the animation of the logo
     let logoAnim = gsap.timeline({ repeat: 0, paused: true });
     logoAnim.to(".logo", {
       opacity: 0,
@@ -103,10 +114,13 @@ export default function Header() {
       delay: 1,
       duration: 0.3,
       ease: "expo.inOut",
+      // Callbacks
       onStart: recenterLogo,
       onReverseComplete: recenterLogo,
     });
 
+    // The arrow animation that idicates the user
+    // to scroll down in the image section of the menu.
     const arrowAnim = gsap.to("#scrollArrows", {
       duration: 0.5,
       ease: "elastic.inOut(0.3)",
@@ -116,6 +130,7 @@ export default function Header() {
     });
     arrowAnim.play();
 
+    // Variables for the scrolling function
     let currentIndex = -1,
       sections = document.querySelectorAll("section"),
       images = document.querySelectorAll("#menuImage"),
@@ -123,9 +138,24 @@ export default function Header() {
       wrap = gsap.utils.wrap(0, sections.length),
       animating = false;
 
+    // <summary>
+    // This function will be called when scrolling in the image section of the menu.
+    // By default all sections are invisible, and once it is call it sets a new one to visible.
+    // Every time the user scrolls it will render the next/prev section with an animation for top/bottom
+    // (depending on the direction of the scroll). Once the animation is finished the old section
+    // that was already displayed will be set to the default value of invisible (`visibility: hidden` whith css).
+    // The `animating` variable does not allow the user to initiate another scroll event,
+    // if the animation has not finished. All nescescary animations are being added through a timeline
+    // dynamically, and all values change dynamically as well. 
+    // </summary>
     function scrolled(index, direction) {
       animating = true;
       index = wrap(index);
+
+      // Enabling the dFactor will result in the transition
+      // comming only from above. On every yPercent property
+      // the direction parameter must be replaced with dFactor.
+      // let dFactor = direction === -1 ? -1 : 1;
 
       let tl = gsap.timeline({
         defaults: { duration: 1.25, ease: "power1.inOut" },
@@ -133,35 +163,60 @@ export default function Header() {
       });
       gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
 
-      // If we scrolled
+      // Animate the previous section to invisible
+      // On the first run currentIndex is -1 so we do not
+      // animate any previous section
       if (currentIndex >= 0) {
         gsap.set(sections[currentIndex], { zIndex: 0 });
-        tl.to(images[currentIndex], { yPercent: 100 * direction }).set(
+        tl.to(images[currentIndex], { yPercent: -15 * direction }).set(
           sections[currentIndex],
           { autoAlpha: 0 }
         );
+        tl.to(headings[currentIndex], { yPercent: 0 });
       }
 
+      // Animate the current section to a visible position
       gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+      tl.fromTo(
+        [sections[index], headings[index]],
+        {
+          yPercent: (i) => (i ? -100 * direction : 100 * direction),
+        },
+        {
+          yPercent: 0,
+        },
+        0
+      ).fromTo(images[index], { yPercent: 15 * direction }, { yPercent: 0 }, 0);
 
-      console.log(index + " : is the value of index");
+      // Set the current index to the section index that was animated
+      // during the run of this function
       currentIndex = index;
-      console.log(currentIndex + " : is the value of currentIndex");
     }
 
+    // The scroll trigger that initates the scrolled function above.
     ScrollTrigger.observe({
       target: ".menu-image",
       type: "wheel, scroll",
-      onUp: () => scrolled(currentIndex - 1, -1),
-      onDown: () => scrolled(currentIndex + 1, 1),
+      onUp: () => !animating && scrolled(currentIndex - 1, -1),
+      onDown: () => !animating && scrolled(currentIndex + 1, 1),
     });
 
+    // Calling scrolled with parameters (0, 1) in order to display the first section
+    scrolled(0, 1);
+
+    // This variable references the body, and we simply controll the overflowY.
+    // Done to disable scrolling on the whole page if the menu is open.
+    let theBody = document.querySelector("body");
+    theBody.style.overflowY = "visible";
+
+    // Adding an onClick event on the burger icon dynamically
+    // This initiates all the header animations
     document.querySelector("#burgerIcon").onclick = () => {
       // boolean to identify the state of the menu
       menuIsOpen = !menuIsOpen;
 
-      if (menuIsOpen && !logoAnim.isActive()) {
-        // Set animation to frame 0 and play
+      if (menuIsOpen) {
+        // Set the logo animation to frame 0 and play
         logoAnim.seek(0);
         logoAnim.play();
         headerBorder.play();
@@ -171,6 +226,7 @@ export default function Header() {
         burgerToX[1].play();
         burgerToX[2].play();
         menuContainer.play();
+        theBody.style.overflowY = "hidden";
       } else {
         logoAnim.reverse();
         headerBorder.reverse();
@@ -180,12 +236,13 @@ export default function Header() {
         burgerToX[1].reverse();
         burgerToX[2].reverse();
         menuContainer.reverse();
+        theBody.style.overflowY = "visible";
       }
     };
   });
 
   return (
-    <>
+    <div id="HEADER DIV">
       <header className="main-tool-bar z-40">
         <div className="w-full flex flex-row-reverse items-center sm:pl-24 sm:pr-24 pl-8 pr-8 flex-nowrap m-0 p-0 border-2 header">
           <div className="w-full flex logo">
@@ -234,7 +291,7 @@ export default function Header() {
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
-              <h3>Hotels</h3>
+              <h2>Hotels</h2>
             </div>
             <Image
               className="relative"
@@ -251,7 +308,7 @@ export default function Header() {
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
-              <h3>Restaurants</h3>
+              <h2>Restaurants</h2>
             </div>
             <Image
               className="relative"
@@ -264,12 +321,12 @@ export default function Header() {
               alt="Picture of a nice restaurant next to a marina. Yachts on the background. The restaurant has wooden chairs with blue cloth on the cushions, and wooden tables with light blue decorations."
             />
           </section>
-          {/* <section className="third">
-            <h3
+          <section className="third">
+            <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
-              Coffee Shops
-            </h3>
+              <h2>Cafeterias</h2>
+            </div>
             <Image
               className="relative z-40"
               id="menuImage"
@@ -282,11 +339,11 @@ export default function Header() {
             />
           </section>
           <section className="fourth">
-            <h3
+            <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
-              Bars And Nightclubs
-            </h3>
+              <h2>Bars And Nightclubs</h2>
+            </div>
             <Image
               className="relative z-40"
               id="menuImage"
@@ -297,7 +354,7 @@ export default function Header() {
               fill={true}
               alt="Picture of a bar, surrounded by stools. Coasy atmosphere and a display of bottles with various alcoholic drinks."
             />
-          </section> */}
+          </section>
           <div className="flex justify-center w-full flex-col self-end">
             <p
               className={`${Fparagraph.className} menu-image-txt flex relative justify-center z-50`}
@@ -313,6 +370,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

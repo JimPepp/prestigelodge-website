@@ -188,11 +188,26 @@ h6 {
   top: 50px;
 }
 
+.first,
+.second,
+.third,
+.fourth {
+  height: inherit;
+  width: inherit;
+  bottom: 0;
+  position: fixed;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 .menu-image {
   width: 1380px;
-  height: 89.6%;
+  height: 88.6%;
   position: relative;
-  border: 3px solid var(--accent-500);
+  /* border: 3px solid var(--accent-500);
+  border-style: outset; */
   display: none;
 }
 
@@ -203,7 +218,7 @@ h6 {
 
 .menu-image-txt {
   color: var(--accent-50);
-  text-shadow: 0px 0px 7px var(--text-900);
+  text-shadow: 0px 4px 4px var(--text-950);
 }
 
 .nav-item:hover {
@@ -218,3 +233,8 @@ h6 {
 .logo.recenter {
   justify-content: center;
 }
+
+/* ================ */
+/* FOOTER COMPONENT */
+/* ================ */
+
