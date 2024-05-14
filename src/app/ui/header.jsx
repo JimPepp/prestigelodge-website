@@ -9,6 +9,7 @@ import {
   Flip,
 } from "../modules/gsap";
 import Image from "next/image";
+import { scrolled } from "../modules/helpers"
 import { useRef } from "react";
 import $ from "jquery";
 
@@ -26,7 +27,7 @@ function recenterLogo() {
 
 export default function Header() {
   useGSAP(() => {
-    // Animation that controlls the header border color
+    // Animation that controls the header border color
     let headerBorder = gsap.to(".header", {
       css: {
         borderColor: "#f5f5f0",
@@ -92,7 +93,7 @@ export default function Header() {
       })
       .progress(1);
 
-    // This scroll trigger checks if the user is scrolling down or up to display 
+    // This scroll trigger checks if the user is scrolling down or up to display
     // the header accordingly (scrolling down hides the header, scrolling up displays it)
     const headerTrigger = ScrollTrigger.create({
       start: "top top",
@@ -102,7 +103,17 @@ export default function Header() {
       },
     });
 
-    // Timeline to controll the animation of the logo
+    // This was being controlled by the callback of the menu button.
+    // However that practice was unnecessary due to the fact that
+    // we now use overflowY = hidden while the menu is open, which
+    // disables the vertical scroll of the page. Check lines 217-218
+    // the how the callback function uses the 'theBody' variable.
+    // (Possibly better for optimization)
+    // headerTrigger.enable();
+    // ║
+    // ╚══> This created the bug noted in the TODOLIST.md
+
+    // Timeline to control the animation of the logo
     let logoAnim = gsap.timeline({ repeat: 0, paused: true });
     logoAnim.to(".logo", {
       opacity: 0,
@@ -119,7 +130,7 @@ export default function Header() {
       onReverseComplete: recenterLogo,
     });
 
-    // The arrow animation that idicates the user
+    // The arrow animation that indicates the user
     // to scroll down in the image section of the menu.
     const arrowAnim = gsap.to("#scrollArrows", {
       duration: 0.5,
@@ -130,70 +141,7 @@ export default function Header() {
     });
     arrowAnim.play();
 
-    // Variables for the scrolling function
-    let currentIndex = -1,
-      sections = document.querySelectorAll("section"),
-      images = document.querySelectorAll("#menuImage"),
-      headings = gsap.utils.toArray(".menu-image-txt"),
-      wrap = gsap.utils.wrap(0, sections.length),
-      animating = false;
-
-    // <summary>
-    // This function will be called when scrolling in the image section of the menu.
-    // By default all sections are invisible, and once it is call it sets a new one to visible.
-    // Every time the user scrolls it will render the next/prev section with an animation for top/bottom
-    // (depending on the direction of the scroll). Once the animation is finished the old section
-    // that was already displayed will be set to the default value of invisible (`visibility: hidden` whith css).
-    // The `animating` variable does not allow the user to initiate another scroll event,
-    // if the animation has not finished. All nescescary animations are being added through a timeline
-    // dynamically, and all values change dynamically as well. 
-    // </summary>
-    function scrolled(index, direction) {
-      animating = true;
-      index = wrap(index);
-
-      // Enabling the dFactor will result in the transition
-      // comming only from above. On every yPercent property
-      // the direction parameter must be replaced with dFactor.
-      // let dFactor = direction === -1 ? -1 : 1;
-
-      let tl = gsap.timeline({
-        defaults: { duration: 1.25, ease: "power1.inOut" },
-        onComplete: () => (animating = false),
-      });
-      gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-
-      // Animate the previous section to invisible
-      // On the first run currentIndex is -1 so we do not
-      // animate any previous section
-      if (currentIndex >= 0) {
-        gsap.set(sections[currentIndex], { zIndex: 0 });
-        tl.to(images[currentIndex], { yPercent: -15 * direction }).set(
-          sections[currentIndex],
-          { autoAlpha: 0 }
-        );
-        tl.to(headings[currentIndex], { yPercent: 0 });
-      }
-
-      // Animate the current section to a visible position
-      gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-      tl.fromTo(
-        [sections[index], headings[index]],
-        {
-          yPercent: (i) => (i ? -100 * direction : 100 * direction),
-        },
-        {
-          yPercent: 0,
-        },
-        0
-      ).fromTo(images[index], { yPercent: 15 * direction }, { yPercent: 0 }, 0);
-
-      // Set the current index to the section index that was animated
-      // during the run of this function
-      currentIndex = index;
-    }
-
-    // The scroll trigger that initates the scrolled function above.
+    // The scroll trigger that initiates the scrolled function above.
     ScrollTrigger.observe({
       target: ".menu-image",
       type: "wheel, scroll",
@@ -201,10 +149,17 @@ export default function Header() {
       onDown: () => !animating && scrolled(currentIndex + 1, 1),
     });
 
-    // Calling scrolled with parameters (0, 1) in order to display the first section
-    scrolled(0, 1);
+    // Variables for the scrolling function
+    let currentIndex = -1,
+      sections = document.querySelectorAll("section"),
+      images = document.querySelectorAll("#menuImage"),
+      headings = gsap.utils.toArray(".menu-image-txt"),
+      wrap = gsap.utils.wrap(0, sections.length),
+      animating = false;
+    // Calling scrolled in order to display the first section
+    scrolled(0, 1, sections, images, headings, wrap);
 
-    // This variable references the body, and we simply controll the overflowY.
+    // This variable references the body, and we simply control the overflowY.
     // Done to disable scrolling on the whole page if the menu is open.
     let theBody = document.querySelector("body");
     theBody.style.overflowY = "visible";
@@ -215,6 +170,8 @@ export default function Header() {
       // boolean to identify the state of the menu
       menuIsOpen = !menuIsOpen;
 
+      // If the menu has to open we play the animations
+      // and disable the header trigger
       if (menuIsOpen) {
         // Set the logo animation to frame 0 and play
         logoAnim.seek(0);
@@ -228,6 +185,8 @@ export default function Header() {
         menuContainer.play();
         theBody.style.overflowY = "hidden";
       } else {
+        // If the menu has to close we reset the animations
+        // and re-enable the header trigger
         logoAnim.reverse();
         headerBorder.reverse();
         headerMenuText.reverse();

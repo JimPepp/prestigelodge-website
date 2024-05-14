@@ -14,6 +14,12 @@ module.exports = {
       },
       screens: {
         'short': { 'raw': '(max-height: 600px)'},
+      },
+      colors: {
+        text: '#27201B',
+        background: "#FDFDFC",
+        accent: "#E5CF6E",
+        secondary: "#795E4E",
       }
     },
     fontSize: {
