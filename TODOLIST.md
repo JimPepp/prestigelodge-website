@@ -1,16 +1,18 @@
 # To Do List
 
 ## General
-- Reconstruct the scrolled function from the header in a helpers file in order to call it from many components without having to duplicate it whenever we need it.
-
+- Reconstruct the scrolled function from the header in a helpers file in order to call it from many components without having to duplicate it whenever we need it. 
+> Considering to not use this type of scrolling animation in any other page, to simplify coding and complete the project faster.
 ## Header - Menu
 - The header logo animation currently runs pixel-based. Update it to animate based on justify-content. (DONE)
 - Double clicking on the menu is breaking the alignment of the logo (DONE)
 - Responsive design (DONE)
 - Observer / ScrollTrigger.observe() on the menu image section. (DONE)
 - Second section does not load the image. (DONE)
-- Reconstruct the HTML in the image scroll. Get the text outside and set it to animate using the Text plugin.
+- Reconstruct the HTML in the image scroll. Get the text outside and set it to animate using the Text plugin. (REDACTED FOR NOW - POSSIBLY LATER)
 - [BUG!] On window resize the header is being triggered (RESOLVED)
+- [BUG!] Menu slides behind the intro section (RESOLVED)
+- **[BUG!] On medium screens the image and text on the menu does not resize appropriately**
 
 ## Footer
 - None currently.
@@ -18,6 +20,11 @@
 
 ## Home Page
 ### Intro Section
-- On the figma design there are images. This must be replaced with videos. (In progress)
-- Consider the posibility to redesign the intro section with the videos occuping the full width of the screen.
-- Observer / ScrollTrigger.observe() must be used to seamlessly transition between the videos and the text in each section.
+- On the figma design there are images. This must be replaced with videos. (DONE)
+- Consider the possibility to redesign the intro section with the videos occupying the full width of the screen. (DONE)
+- Observer / ScrollTrigger.observe() must be used to seamlessly transition between the videos and the text in each section. (DONE)
+- Find videos that will fit the intro section of the website. (DONE)
+> All videos must be SD quality for faster loading in realtime from client
+- Responsive design for smaller screens.
+- Create the "What makes us different" section
+- Consider redesigning for coding simplicity.

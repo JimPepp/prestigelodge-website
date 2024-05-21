@@ -23,12 +23,12 @@ export default function Footer() {
         </h3>
       </div>
       <div className="flex flex-row justify-center py-5">
-        <p className="px-5">Facebook</p>
-        <p className="px-8">X</p>
-        <p className="px-5">Instagram</p>
+        <p className="px-5 nav-item">Facebook</p>
+        <p className="px-8 nav-item">X</p>
+        <p className="px-5 nav-item">Instagram</p>
       </div>
       <div className="flex flex-col items-center py-5">
-        <p>
+        <p className="nav-item">
           <a href="#.#">www.prestigelodgedigital.com</a>
         </p>
         <p>Piraeus, Attica - Greece</p>

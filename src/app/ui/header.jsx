@@ -9,7 +9,7 @@ import {
   Flip,
 } from "../modules/gsap";
 import Image from "next/image";
-import { scrolled } from "../modules/helpers"
+import { scrolled } from "../modules/helpers";
 import { useRef } from "react";
 import $ from "jquery";
 
@@ -81,6 +81,7 @@ export default function Header() {
       paused: true,
       duration: 1.7,
       ease: "sine",
+      zIndex: 100
     });
 
     // The element with class .main-tool-bar is the header.
@@ -156,8 +157,54 @@ export default function Header() {
       headings = gsap.utils.toArray(".menu-image-txt"),
       wrap = gsap.utils.wrap(0, sections.length),
       animating = false;
+
+    function scrolled(index, direction) {
+      animating = true;
+      index = wrap(index);
+
+      // Enabling the dFactor will result in the transition
+      // coming only from above. On every yPercent property
+      // the direction parameter must be replaced with dFactor.
+      // let dFactor = direction === -1 ? -1 : 1;
+
+      let tl = gsap.timeline({
+        defaults: { duration: 1.25, ease: "power1.inOut" },
+        onComplete: () => (animating = false),
+      });
+      gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+
+      // Animate the previous section to invisible
+      // On the first run currentIndex is -1 so we do not
+      // animate any previous section
+      if (currentIndex >= 0) {
+        gsap.set(sections[currentIndex], { zIndex: 0 });
+        tl.to(images[currentIndex], { yPercent: -15 * direction }).set(
+          sections[currentIndex],
+          { autoAlpha: 0 }
+        );
+        tl.to(headings[currentIndex], { yPercent: 0 });
+      }
+
+      // Animate the current section to a visible position
+      gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+      tl.fromTo(
+        [sections[index], headings[index]],
+        {
+          yPercent: (i) => (i ? -100 * direction : 100 * direction),
+        },
+        {
+          yPercent: 0,
+        },
+        0
+      ).fromTo(images[index], { yPercent: 15 * direction }, { yPercent: 0 }, 0);
+
+      // Set the current index to the section index that was animated
+      // during the run of this function
+      currentIndex = index;
+    }
+
     // Calling scrolled in order to display the first section
-    scrolled(0, 1, sections, images, headings, wrap);
+    scrolled(0, 1);
 
     // This variable references the body, and we simply control the overflowY.
     // Done to disable scrolling on the whole page if the menu is open.
@@ -202,7 +249,7 @@ export default function Header() {
 
   return (
     <div id="HEADER DIV">
-      <header className="main-tool-bar z-40">
+      <header className="main-tool-bar">
         <div className="w-full flex flex-row-reverse items-center sm:pl-24 sm:pr-24 pl-8 pr-8 flex-nowrap m-0 p-0 border-2 header">
           <div className="w-full flex logo">
             <h1 className={`${Fh1.className} text-5xl sm:text-6xl`}>

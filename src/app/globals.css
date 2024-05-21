@@ -133,9 +133,9 @@ h6 {
   text-transform: capitalize;
 }
 
-/* ================ */
-/* HEADER COMPONENT */
-/* ================ */
+/* ============================ */
+/* HEADER AND FOOTER COMPONENTS */
+/* ============================ */
 
 .header {
   border-color: var(--text-950);
@@ -147,7 +147,7 @@ h6 {
   border-width: 1px;
 }
 
-.burger:hover>.line {
+.burger:hover > .line {
   border-color: var(--accent-500);
 }
 
@@ -170,6 +170,7 @@ h6 {
   left: 0;
   top: 0;
   transition: ease 0.4s;
+  z-index: 101;
 
   &--scrolled {
     height: 40px;
@@ -235,6 +236,62 @@ h6 {
 }
 
 /* ================ */
-/* FOOTER COMPONENT */
+/* INTRO COMPONENT */
 /* ================ */
 
+.intro-txt-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro-txt-subtitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 180%);
+}
+
+.panel {
+	width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  /* padding: 10px; */
+  background: var(--background-50);
+  overflow:hidden;
+}
+
+.panel-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.panel-subtitle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+}
+
+.overlay-txt {
+  color: var(--accent-50);
+  text-shadow: 0px 0px 3px var(--text-950), 0px 2px 0px var(--text-950), 0px -1px 0px var(--text-950),
+  1px 0px 0px var(--text-950), -1px 0px 0px var(--text-950), 0px 1px 0px var(--text-950);
+}
+
+.intro-logo {
+  color: var(--text-900);
+  font-size: 10rem;
+  text-shadow: 0px 4px 0px var(--accent-50);
+  /* text-shadow: 0px 0px 3px var(--text-950), 0px 2px 0px var(--text-950), 0px -1px 0px var(--text-950),
+  1px 0px 0px var(--text-950), -1px 0px 0px var(--text-950), 0px 1px 0px var(--text-950); */
+}

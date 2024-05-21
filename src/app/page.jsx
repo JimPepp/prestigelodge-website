@@ -1,11 +1,10 @@
-import Header from "./ui/header";
-import Footer from "./ui/footer";
-import Test from "./ui/test";
+import { Header, Footer, Test, Intro } from "./ui/uiComponents"
 
 export default function Page() {
   return (
     <body>
       <Header />
+      <Intro />
       <Test />
       <Footer />
     </body>
