@@ -152,15 +152,15 @@ export default function Header() {
 
     // Variables for the scrolling function
     let currentIndex = -1,
-      sections = document.querySelectorAll("section"),
+      sections = document.querySelectorAll(".scrollWrapItem"),
       images = document.querySelectorAll("#menuImage"),
       headings = gsap.utils.toArray(".menu-image-txt"),
-      wrap = gsap.utils.wrap(0, sections.length),
+      wrapper = gsap.utils.wrap(0, sections.length),
       animating = false;
 
     function scrolled(index, direction) {
+      index = wrapper(index);
       animating = true;
-      index = wrap(index);
 
       // Enabling the dFactor will result in the transition
       // coming only from above. On every yPercent property
@@ -293,7 +293,7 @@ export default function Header() {
           </h6>
         </div>
         <div className="menu-image hidden lg:flex self-center lg:self-auto">
-          <section className="first">
+          <section className="first scrollWrapItem">
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
@@ -310,7 +310,7 @@ export default function Header() {
               alt="Picture of a pool in a hotel, surrounded by a spruce deck. Various trees behind the deck and sea in the far background"
             />
           </section>
-          <section className="second">
+          <section className="second scrollWrapItem">
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
@@ -327,7 +327,7 @@ export default function Header() {
               alt="Picture of a nice restaurant next to a marina. Yachts on the background. The restaurant has wooden chairs with blue cloth on the cushions, and wooden tables with light blue decorations."
             />
           </section>
-          <section className="third">
+          <section className="third scrollWrapItem">
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
@@ -344,7 +344,7 @@ export default function Header() {
               alt="Picture of a coffee shop, with white marble on top of the bar. A display of various ingredients to makek beverages. Gold decorations on a white wall."
             />
           </section>
-          <section className="fourth">
+          <section className="fourth scrollWrapItem">
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >

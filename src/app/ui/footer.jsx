@@ -12,7 +12,7 @@ import {
 export default function Footer() {
   return (
     <div id="FOOTER DIV">
-      <div className="flex flex-row py-10 justify-center items-center">
+      <div className="flex flex-row py-0 justify-center items-center">
         <div className=" w-2/12 h-0.5 bg-text"></div>
         <h1 className={`${Fh1.className} pl-10 pr-10`}>Prestige Lodge</h1>
         <div className=" w-2/12 h-0.5 bg-text"></div>

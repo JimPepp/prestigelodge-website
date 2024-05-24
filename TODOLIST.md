@@ -19,7 +19,6 @@
 - Finished
 
 ## Home Page
-### Intro Section
 - On the figma design there are images. This must be replaced with videos. (DONE)
 - Consider the possibility to redesign the intro section with the videos occupying the full width of the screen. (DONE)
 - Observer / ScrollTrigger.observe() must be used to seamlessly transition between the videos and the text in each section. (DONE)

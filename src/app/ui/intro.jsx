@@ -13,7 +13,8 @@ import Image from "next/image";
 export default function Intro() {
   useGSAP(() => {
     var panels = gsap.utils.toArray(".panel");
-
+    var titles = gsap.utils.toArray(".panel-title");
+    
     panels.pop(); // get rid of the last one (don't need it in the loop)
     panels.forEach((panel, i) => {
       let tl = gsap.timeline({
@@ -27,20 +28,64 @@ export default function Intro() {
           onRefresh: () =>
             gsap.set(panel, {
               transformOrigin:
+              "center " +
+              (panel.offsetHeight - window.innerHeight / 2) +
+              "px",
+            }),
+          },
+        });
+        
+        tl.fromTo(
+          panel,
+          {
+            y: 0,
+            rotate: 0,
+            scale: 1,
+            opacity: 1,
+          },
+          {
+            y: 0,
+            rotate: 0,
+            scale: 1.5,
+            opacity: 0.5,
+          }
+        ).to(panel, { opacity: 0, duration: 1 });
+      });
+
+    titles.pop();
+    titles.forEach((title, i) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: title,
+          start: "center center",
+          pinSpacing: false,
+          pin: true,
+          scrub: true,
+          // set the transformOrigin so that it's in the center vertically of the viewport when the element's bottom hits the bottom of the viewport
+          onRefresh: () =>
+            gsap.set(title, {
+              transformOrigin:
                 "center " +
-                (panel.offsetHeight - window.innerHeight / 2) +
+                (title.offsetHeight - window.innerHeight / 2) +
                 "px",
             }),
         },
       });
 
       tl.fromTo(
-        panel,
-        1,
-        { y: 0, rotate: 0, scale: 1, opacity: 1 },
-        { y: 0, rotateX: 0, scale: 0.5, opacity: 0.5 },
-        0
-      ).to(panel, 0.1, { opacity: 0 });
+        title,
+        {
+          y: 0,
+          rotate: 0,
+          scale: 1,
+          duration: 1
+        },
+        {
+          y: 0,
+          rotate: 0,
+          scale: 0.5,
+        }
+      );
     });
   });
 
@@ -51,7 +96,9 @@ export default function Intro() {
           <source src="/Man-Swimming-Hotel-Pool.mp4" type="video/mp4" />
           Your browser does not support videos!
         </video>
-        <h1 className={`${Fh1.className} intro-txt-title intro-logo`}>Prestige Lodge</h1>
+        <h1 className={`${Fh1.className} intro-txt-title intro-logo`}>
+          Prestige Lodge
+        </h1>
         <h3 className={`${Fh2h3.className} intro-txt-subtitle overlay-txt`}>
           The finest digital presence
         </h3>
@@ -62,7 +109,9 @@ export default function Intro() {
             <source src="/Sea-View.mp4" type="video/mp4" />
             Your browser does not support videos!
           </video>
-          <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>What we do</h3>
+          <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
+            What we do
+          </h3>
           <p className={`${Fparagraph.className} panel-subtitle overlay-txt`}>
             At Prestige Lodge, we specialize in providing bespoke digital
             solutions designed to elevate the online presence of businesses in
@@ -82,15 +131,19 @@ export default function Intro() {
             <source src="/Restaurant-Walk.mp4" type="video/mp4" />
             Your browser does not support videos!
           </video>
-          <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>Website Creation</h3>
-          <p className={`${Fparagraph.className} panel-subtitle overlay-txt overlay-txt`}>
-            We redefine website creation with our unparalleled services. Each
-            website we craft is a masterpiece, meticulously tailored exclusively
-            for you. Far from being just another ordinary website, we specialize
-            in delivering immersive experiences that truly encapsulate the
-            essence and individuality of your business. With our dedication to
-            precision and creativity, we ensure that your online presence stands
-            out from the crowd, leaving a lasting impression on your audience.
+          <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
+            Website development
+          </h3>
+          <p
+            className={`${Fparagraph.className} panel-subtitle overlay-txt overlay-txt`}
+          >
+            We redefine website development with our innovative approach. Each
+            website we create is meticulously tailored exclusively for you. Far
+            from being just another ordinary website, we specialize in
+            delivering immersive experiences that truly encapsulate the essence
+            and individuality of your business. With our dedication to precision
+            and creativity, we ensure that your online presence stands out from
+            the crowd, leaving a lasting impression on your audience.
           </p>
         </section>
         <section className="panel">
@@ -99,20 +152,17 @@ export default function Intro() {
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
-            Digital marketing strategies
+            Digital marketing services
           </h3>
           <p className={`${Fparagraph.className} panel-subtitle overlay-txt`}>
             We understand the importance of a robust online presence in today's
-            digital landscape. That's why we offer comprehensive digital
-            marketing services meticulously tailored for businesses in the
-            hospitality and dining industries. From strategic SEO techniques to
-            engaging social media campaigns, our goal is to help you attract
-            more customers and drive revenue growth. Whether you're a boutique
-            hotel, a cozy cafe, or a fine dining restaurant, we'll work closely
-            with you to develop customized digital marketing strategies that
-            align with your business objectives and resonate with your target
-            audience. With our expertise and dedication, we'll elevate your
-            online presence and set you apart from the competition.
+            digital marketplace. That's why we offer comprehensive digital
+            marketing services tailored for businesses in the hospitality and
+            dining industries. From strategic SEO techniques to engaging social
+            media campaigns, our goal is to help you attract more customers and
+            drive revenue growth. We'll work closely with you to develop
+            customized digital marketing strategies that align with your
+            business objectives.
           </p>
         </section>
         <section className="panel">
@@ -121,7 +171,7 @@ export default function Intro() {
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
-            Immersive Branding Experiences
+            Branding Services
           </h3>
           <p className={`${Fparagraph.className} panel-subtitle overlay-txt`}>
             At Prestige Lodge, we specialize in creating cohesive and memorable
