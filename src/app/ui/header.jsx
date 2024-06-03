@@ -26,6 +26,10 @@ function recenterLogo() {
 }
 
 export default function Header() {
+
+  // set .menu-image height property using JS
+  // height = window.height - header.height
+
   useGSAP(() => {
     // Animation that controls the header border color
     let headerBorder = gsap.to(".header", {

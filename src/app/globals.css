@@ -275,11 +275,13 @@ h6 {
   transform: translate(-50%, -50%);
 }
 
-.panel-subtitle {
+.panel-paragraph {
   position: absolute;
   top: 40%;
   left: 50%;
+  margin-top: 2rem;
   transform: translate(-50%, 15%);
+  opacity: 1;
 }
 
 .overlay-txt {
