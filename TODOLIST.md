@@ -2,7 +2,10 @@
 
 ## General
 - Reconstruct the scrolled function from the header in a helpers file in order to call it from many components without having to duplicate it whenever we need it. 
-> Considering to not use this type of scrolling animation in any other page, to simplify coding and complete the project faster.
+> Considering to not use this type of scrolling animation in any other page, to simplify coding and complete the project faster. (DONE)
+- [IMPORTANT!] Redesign the whole page as a one-page funnel type of page. Keep everything as is (except of the menu)
+- Update the header to match the above!
+- Form email setup using nextjs (https://www.freecodecamp.org/news/how-to-build-a-working-contact-form-with-sendgrid-and-next-js/)
 ## Header - Menu
 - The header logo animation currently runs pixel-based. Update it to animate based on justify-content. (DONE)
 - Double clicking on the menu is breaking the alignment of the logo (DONE)
@@ -12,14 +15,11 @@
 - Reconstruct the HTML in the image scroll. Get the text outside and set it to animate using the Text plugin. (REDACTED FOR NOW - POSSIBLY LATER)
 - [BUG!] On window resize the header is being triggered (RESOLVED)
 - [BUG!] Menu slides behind the intro section (RESOLVED)
-- **[BUG!] On medium screens the image and text on the menu does not resize appropriately**
-- [IMPORTANT!] Redesign the whole page as a one-page funnel type of page. Keep everything as is (except of the menu)
-- Update the header to match the above!
+- **[BUG!] On medium screens the image and text on the menu does not resize appropriately** (DROPPED)
 
 ## Footer
-- None currently.
-- Finished
-- Responsive design.
+- None currently.(DONE)
+- Responsive design. 
 
 ## Home Page
 - On the figma design there are images. This must be replaced with videos. (DONE)
@@ -28,5 +28,5 @@
 - Find videos that will fit the intro section of the website. (DONE) NOTE: All videos must be SD quality for faster loading in realtime from client
 - Responsive design for smaller screens.
 - Create the "What makes us different" section
-- Consider redesigning for coding simplicity.
+- Consider redesigning for coding simplicity. (DONE)
 - Responsive design.
