@@ -147,7 +147,7 @@ h6 {
   border-width: 1px;
 }
 
-.burger:hover > .line {
+.burger:hover>.line {
   border-color: var(--accent-500);
 }
 
@@ -254,7 +254,7 @@ h6 {
 }
 
 .panel {
-	width: 100%;
+  width: 100%;
   min-height: 100%;
   display: flex;
   justify-content: center;
@@ -265,7 +265,7 @@ h6 {
   box-sizing: border-box;
   /* padding: 10px; */
   background: var(--background-50);
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .panel-title {
@@ -287,7 +287,7 @@ h6 {
 .overlay-txt {
   color: var(--accent-50);
   text-shadow: 0px 0px 3px var(--text-950), 0px 2px 0px var(--text-950), 0px -1px 0px var(--text-950),
-  1px 0px 0px var(--text-950), -1px 0px 0px var(--text-950), 0px 1px 0px var(--text-950);
+    1px 0px 0px var(--text-950), -1px 0px 0px var(--text-950), 0px 1px 0px var(--text-950);
 }
 
 .intro-logo {
@@ -306,7 +306,8 @@ form {
   width: 60%;
 }
 
-input, #fmsg {
+input,
+#fmsg {
   color: var(--secondary-600);
   background-color: var(--secondary-200);
   border-radius: 10px;
@@ -328,4 +329,32 @@ input::-webkit-input-placeholder,
   height: 400px;
   padding: 10px 10px;
   box-sizing: border-box;
+}
+
+input:focus,
+#fmsg:focus {
+  outline: none !important;
+  border: 2px solid var(--accent-300);
+  box-shadow: 0 0 10px var(--accent-200);
+}
+
+.sndbtn {
+  background-color: var(--secondary-200);
+  border: solid 2px var(--text-950);
+  width: 100px;
+  height: 30px;
+  color: var(--text-950);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.sndbtn:hover {
+  color: var(--accent-100);
+  border-color: var(--secondary-700);
+  background-color: var(--secondary-700);
+  transition: .5s;
 }

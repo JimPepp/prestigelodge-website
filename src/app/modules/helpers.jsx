@@ -26,56 +26,56 @@ import { useEffect } from "react";
  * @param {wrap} wrap - the wrap of the sections
  * @param {boolean} animating - A boolean to represent if the animation is currently playing or not.
  */
-export function scrolled(
-  index,
-  direction,
-  sections,
-  items,
-  headings,
-  wrap,
-  animating,
-  currentIndex
-) {
-  animating = true;
-  index = gsap.utils.wrap(index);
+// export function scrolled(
+//   index,
+//   direction,
+//   sections,
+//   items,
+//   headings,
+//   wrap,
+//   animating,
+//   currentIndex
+// ) {
+//   animating = true;
+//   index = gsap.utils.wrap(index);
 
-  // Enabling the dFactor will result in the transition
-  // coming only from above. On every yPercent property
-  // the direction parameter must be replaced with dFactor.
-  // let dFactor = direction === -1 ? -1 : 1;
+//   // Enabling the dFactor will result in the transition
+//   // coming only from above. On every yPercent property
+//   // the direction parameter must be replaced with dFactor.
+//   // let dFactor = direction === -1 ? -1 : 1;
 
-  let tl = gsap.timeline({
-    defaults: { duration: 1.25, ease: "power1.inOut" },
-    onComplete: () => (animating = false),
-  });
-  gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+//   let tl = gsap.timeline({
+//     defaults: { duration: 1.25, ease: "power1.inOut" },
+//     onComplete: () => (animating = false),
+//   });
+//   gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
 
-  // Animate the previous section to invisible
-  // On the first run currentIndex is -1 so we do not
-  // animate any previous section
-  if (currentIndex >= 0) {
-    gsap.set(sections[currentIndex], { zIndex: 0 });
-    tl.to(items[currentIndex], { yPercent: -15 * direction }).set(
-      sections[currentIndex],
-      { autoAlpha: 0 }
-    );
-    tl.to(headings[currentIndex], { yPercent: 0 });
-  }
+//   // Animate the previous section to invisible
+//   // On the first run currentIndex is -1 so we do not
+//   // animate any previous section
+//   if (currentIndex >= 0) {
+//     gsap.set(sections[currentIndex], { zIndex: 0 });
+//     tl.to(items[currentIndex], { yPercent: -15 * direction }).set(
+//       sections[currentIndex],
+//       { autoAlpha: 0 }
+//     );
+//     tl.to(headings[currentIndex], { yPercent: 0 });
+//   }
 
-  // Animate the current section to a visible position
-  gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-  tl.fromTo(
-    [sections[index], headings[index]],
-    {
-      yPercent: (i) => (i ? -100 * direction : 100 * direction),
-    },
-    {
-      yPercent: 0,
-    },
-    0
-  ).fromTo(items[index], { yPercent: 15 * direction }, { yPercent: 0 }, 0);
+//   // Animate the current section to a visible position
+//   gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+//   tl.fromTo(
+//     [sections[index], headings[index]],
+//     {
+//       yPercent: (i) => (i ? -100 * direction : 100 * direction),
+//     },
+//     {
+//       yPercent: 0,
+//     },
+//     0
+//   ).fromTo(items[index], { yPercent: 15 * direction }, { yPercent: 0 }, 0);
 
-  // Set the current index to the section index that was animated
-  // during the run of this function
-  currentIndex = index;
-}
+//   // Set the current index to the section index that was animated
+//   // during the run of this function
+//   currentIndex = index;
+// }
