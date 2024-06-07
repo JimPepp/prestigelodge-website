@@ -1,12 +1,15 @@
 'use client'
 
+import { useEffect } from "react";
 import { Intro, Contact, Footer } from "./ui/uiComponents";
 
-window.onbeforeunload = function () {
-  window.scrollTo(0,0);
-}
-
 export default function Page() {
+
+  useEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0,0);
+    }
+  })
 
   return (
     <body>

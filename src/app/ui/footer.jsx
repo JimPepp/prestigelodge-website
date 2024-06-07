@@ -22,10 +22,15 @@ export default function Footer() {
           Where Digital Sophistication Meets Hospitality Excellence
         </h3>
       </div>
-      <div className="flex flex-row justify-center py-5">
-        <p className="px-5 nav-item">Facebook</p>
-        <p className="px-8 nav-item">X</p>
-        <p className="px-5 nav-item">Instagram</p>
+      <div className="flex justify-center pt-5 pb-2">
+        <p>Follow us</p>
+      </div>
+      <div className="flex flex-row justify-center pb-5">
+        {/* <p className="px-5 nav-item">Facebook</p> */}
+        <p className="px-8 nav-item">
+          <a href="https://x.com/prestigelodge">X</a>
+        </p>
+        {/* <p className="px-5 nav-item">Instagram</p> */}
       </div>
       <div className="flex flex-col items-center py-5">
         <p className="nav-item">
