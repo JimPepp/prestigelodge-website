@@ -123,6 +123,7 @@ export default function Intro() {
       <div>
         <video autoPlay muted loop width={"100%"} height={"100%"}>
           <source src="/Man-Swimming-Hotel-Pool.mp4" type="video/mp4" />
+          <source src="/Man-Swimming-Hotel-Pool.webm" type="video/webm" />
           Your browser does not support videos!
         </video>
         <h1 className={`${Fh1.className} intro-txt-title intro-logo`}>
@@ -135,7 +136,9 @@ export default function Intro() {
       <div>
         <section className="panel">
           <video autoPlay muted loop width={"100%"} height={"100%"}>
-            <source src="/Sea-View.mp4" type="video/mp4" />
+          <source src="/Sea-View.mp4" type="video/mp4" />
+          <source src="/Sea-View.webm" type="video/webm" />
+            <source src="/Sea-View.ogg" type="video/ogg" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
@@ -158,6 +161,8 @@ export default function Intro() {
         <section className="panel">
           <video autoPlay muted loop width={"100%"} height={"100%"}>
             <source src="/Restaurant-Walk.mp4" type="video/mp4" />
+            <source src="/Restaurant-Walk.webm" type="video/webm" />
+            <source src="/Restaurant-Walk.ogg" type="video/ogg" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
@@ -178,6 +183,7 @@ export default function Intro() {
         <section className="panel">
           <video autoPlay muted loop width={"100%"} height={"100%"}>
             <source src="/Sushi.mp4" type="video/mp4" />
+            <source src="/Sushi.webm" type="video/webm" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
@@ -219,6 +225,7 @@ export default function Intro() {
         <section className="panel">
           <video autoPlay muted loop width={"100%"} height={"100%"}>
             <source src="/Consultation.mp4" type="video/mp4" />
+            <source src="/Consultation.webm" type="video/webm" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>

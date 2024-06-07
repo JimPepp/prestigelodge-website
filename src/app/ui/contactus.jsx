@@ -27,7 +27,6 @@ export default function Contact() {
             <input
               type="text"
               name="fname"
-              placeholder="Full Name"
               onChange={(e) => { setFullname(e.target.value) }}
             />
             <label for="fmail" className=" text-text">
