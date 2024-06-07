@@ -197,6 +197,8 @@ export default function Intro() {
         <section className="panel">
           <video autoPlay muted loop width={"100%"} height={"100%"}>
             <source src="/Watch.mp4" type="video/mp4" />
+            <source src="/Watch.webm" type="video/webm" />
+            <source src="/Watch.ogg" type="video/ogg" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
