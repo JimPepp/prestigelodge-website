@@ -14,6 +14,7 @@ module.exports = {
       },
       screens: {
         'short': { 'raw': '(max-height: 600px)'},
+        'xs': { 'raw': '(min-width: 20px)' }
       },
       colors: {
         text: '#27201B',
@@ -31,6 +32,9 @@ module.exports = {
       '4xl': '2.5rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      'logoM' : '6rem',
+      'logoL' : '8rem',
+      'logoXL' : '10rem'
     }
   },
   plugins: [],

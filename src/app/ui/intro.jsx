@@ -121,12 +121,35 @@ export default function Intro() {
   return (
     <div className="INTRO-DIV">
       <div>
-        <video autoPlay muted loop width={"100%"} height={"100%"}>
-          <source src="/Man-Swimming-Hotel-Pool.mp4" type="video/mp4" />
-          <source src="/Man-Swimming-Hotel-Pool.webm" type="video/webm" />
+        <video
+          autoPlay
+          muted
+          loop
+          width={"100%"}
+          height={"100%"}
+          className="hidden lg:block"
+        >
+          <source src="/video/Man-Swimming-Hotel-Pool.mp4" type="video/mp4" />
+          <source src="/video/Man-Swimming-Hotel-Pool.webm" type="video/webm" />
           Your browser does not support videos!
-        </video>
-        <h1 className={`${Fh1.className} intro-txt-title intro-logo`}>
+        </video>{" "}
+        <div className="block lg:hidden">
+          <video
+            autoPlay
+            muted
+            loop
+            width={"100%"}
+            height={"100%"}
+            className="object-cover"
+          >
+            <source src="/video/ElephantPool.mp4" type="video/mp4" />
+            <source src="/video/ElephantPool.mp4.webm" type="video/webm" />
+            Your browser does not support videos!
+          </video>
+        </div>
+        <h1
+          className={`${Fh1.className} absolute top-1/4 left-1/3 text-xl lg:text-logoXL intro-txt-title intro-logo `}
+        >
           Prestige Lodge
         </h1>
         <h3 className={`${Fh2h3.className} intro-txt-subtitle overlay-txt`}>
@@ -135,10 +158,17 @@ export default function Intro() {
       </div>
       <div>
         <section className="panel">
-          <video autoPlay muted loop width={"100%"} height={"100%"}>
-            <source src="/Sea-View.mp4" type="video/mp4" />
-            <source src="/Sea-View.webm" type="video/webm" />
-            <source src="/Sea-View.ogg" type="video/ogg" />
+          <video
+            autoPlay
+            muted
+            loop
+            width={"100%"}
+            height={"100%"}
+            className="hidden lg:block"
+          >
+            <source src="/video/Sea-View.mp4" type="video/mp4" />
+            <source src="/video/Sea-View.webm" type="video/webm" />
+            <source src="/video/Sea-View.ogg" type="video/ogg" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
@@ -156,10 +186,17 @@ export default function Intro() {
           </p>
         </section>
         <section className="panel">
-          <video autoPlay muted loop width={"100%"} height={"100%"}>
-            <source src="/Restaurant-Walk.mp4" type="video/mp4" />
-            <source src="/Restaurant-Walk.webm" type="video/webm" />
-            <source src="/Restaurant-Walk.ogg" type="video/ogg" />
+          <video
+            autoPlay
+            muted
+            loop
+            width={"100%"}
+            height={"100%"}
+            className="hidden lg:block"
+          >
+            <source src="/video/Restaurant-Walk.mp4" type="video/mp4" />
+            <source src="/video/Restaurant-Walk.webm" type="video/webm" />
+            <source src="/video/Restaurant-Walk.ogg" type="video/ogg" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
@@ -178,9 +215,16 @@ export default function Intro() {
           </p>
         </section>
         <section className="panel">
-          <video autoPlay muted loop width={"100%"} height={"100%"}>
-            <source src="/Consultation.mp4" type="video/mp4" />
-            <source src="/Consultation.webm" type="video/webm" />
+          <video
+            autoPlay
+            muted
+            loop
+            width={"100%"}
+            height={"100%"}
+            className="hidden lg:block"
+          >
+            <source src="/video/Consultation.mp4" type="video/mp4" />
+            <source src="/video/Consultation.webm" type="video/webm" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
@@ -199,10 +243,17 @@ export default function Intro() {
           </p>
         </section>
         <section className="panel">
-          <video autoPlay muted loop width={"100%"} height={"100%"}>
-            <source src="/Watch.mp4" type="video/mp4" />
-            <source src="/Watch.webm" type="video/webm" />
-            <source src="/Watch.ogg" type="video/ogg" />
+          <video
+            autoPlay
+            muted
+            loop
+            width={"100%"}
+            height={"100%"}
+            className="hidden lg:block"
+          >
+            <source src="/video/Watch.mp4" type="video/mp4" />
+            <source src="/video/Watch.webm" type="video/webm" />
+            <source src="/video/Watch.ogg" type="video/ogg" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
