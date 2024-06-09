@@ -38,30 +38,6 @@ export default function Footer() {
         </p>
         <p>Piraeus, Attica - Greece</p>
       </div>
-      {/* <div className="flex flex-col items-center py-5">
-        <p className=" text-secondary">SITEMAP</p>
-        <div className=" w-2/12 h-0.5 bg-text"></div>
-        <div className="flex flex-col items-center py-5">
-          <p className="nav-item py-3">
-            <a href="#.#">Home</a>
-          </p>
-          <p className="nav-item py-3">
-            <a href="#.#">About us</a>
-          </p>
-          <p className="nav-item py-3">
-            <a href="#.#">Services</a>
-          </p>
-          <p className="nav-item py-3">
-            <a href="#.#">Portfolio</a>
-          </p>
-          <p className="nav-item py-3">
-            <a href="#.#">Testimonials</a>
-          </p>
-          <p className="nav-item py-3">
-            <a href="#.#">Contact us</a>
-          </p>
-        </div>
-      </div> */}
       <div className="flex flex-col items-center py-5">
         <p>© 2024 Prestige Lodge. All rights reserved.</p>
       </div>

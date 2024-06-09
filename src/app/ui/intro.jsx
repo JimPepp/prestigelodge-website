@@ -136,8 +136,8 @@ export default function Intro() {
       <div>
         <section className="panel">
           <video autoPlay muted loop width={"100%"} height={"100%"}>
-          <source src="/Sea-View.mp4" type="video/mp4" />
-          <source src="/Sea-View.webm" type="video/webm" />
+            <source src="/Sea-View.mp4" type="video/mp4" />
+            <source src="/Sea-View.webm" type="video/webm" />
             <source src="/Sea-View.ogg" type="video/ogg" />
             Your browser does not support videos!
           </video>
@@ -145,17 +145,14 @@ export default function Intro() {
             What we do
           </h3>
           <p className={`${Fparagraph.className} panel-paragraph overlay-txt`}>
-            At Prestige Lodge, we specialize in providing bespoke digital
-            solutions designed to elevate the online presence of businesses in
-            the hospitality and dining industries. Our services include
-            cutting-edge website creation, innovative digital marketing
-            strategies, and comprehensive branding solutions. With a deep
-            understanding of the unique challenges and opportunities in these
-            sectors, we craft tailored strategies that drive engagement,
-            increase bookings, and boost revenue. Our commitment to excellence,
-            creativity, and customer satisfaction ensures that your digital
-            presence is not only visually stunning but also highly effective in
-            achieving your business goals.
+            At Prestige Lodge, we specialize in connecting hospitality
+            businesses with top-tier service providers to enhance their digital
+            presence and operational efficiency. Our tailored solutions bridge
+            the gap between hotels, restaurants, and other hospitality entities
+            with experts in website creation, digital marketing, and branding.
+            By partnering with us, hospitality businesses can access a network
+            of professionals dedicated to driving their success in the
+            competitive online landscape.
           </p>
         </section>
         <section className="panel">
@@ -182,22 +179,23 @@ export default function Intro() {
         </section>
         <section className="panel">
           <video autoPlay muted loop width={"100%"} height={"100%"}>
-            <source src="/Sushi.mp4" type="video/mp4" />
-            <source src="/Sushi.webm" type="video/webm" />
+            <source src="/Consultation.mp4" type="video/mp4" />
+            <source src="/Consultation.webm" type="video/webm" />
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
-            Digital marketing services
+            Business Consulting
           </h3>
           <p className={`${Fparagraph.className} panel-paragraph overlay-txt`}>
-            We understand the importance of a robust online presence in today's
-            digital marketplace. That's why we offer comprehensive digital
-            marketing services tailored for businesses in the hospitality and
-            dining industries. From strategic SEO techniques to engaging social
-            media campaigns, our goal is to help you attract more customers and
-            drive revenue growth. We'll work closely with you to develop
-            customized digital marketing strategies that align with your
-            business objectives.
+            At Prestige Lodge, our Business Consulting services are designed to
+            elevate your hospitality enterprise by connecting you with certified
+            professionals who have years of hands-on experience in the industry.
+            Our consultants provide tailored advice and strategic insights to
+            optimize your operations, enhance customer experiences, and drive
+            growth. Whether you're looking to improve efficiency, boost your
+            online presence, or refine your brand, our experts are here to guide
+            you every step of the way, ensuring your business achieves its full
+            potential.
           </p>
         </section>
         <section className="panel">
@@ -208,41 +206,20 @@ export default function Intro() {
             Your browser does not support videos!
           </video>
           <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
-            Branding Services
+            What makes us different!
           </h3>
           <p className={`${Fparagraph.className} panel-paragraph overlay-txt`}>
-            At Prestige Lodge, we specialize in creating cohesive and memorable
-            brand identities that resonate deeply with your target audience. Our
-            branding services capture the essence of your business, setting you
-            apart from the competition with distinctive and compelling visuals.
-            From logo design to crafting powerful brand messaging, we ensure
-            that every element of your brand reflects your core values and
-            vision. The result is a unified and impactful brand identity that
-            leaves a lasting impression on your customers, driving loyalty and
-            engagement.
-          </p>
-        </section>
-        <section className="panel">
-          <video autoPlay muted loop width={"100%"} height={"100%"}>
-            <source src="/Consultation.mp4" type="video/mp4" />
-            <source src="/Consultation.webm" type="video/webm" />
-            Your browser does not support videos!
-          </video>
-          <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
-            Business Consulting
-          </h3>
-          <p className={`${Fparagraph.className} panel-paragraph overlay-txt`}>
-            We offer comprehensive business consulting services specifically
-            designed for cafeterias, bars, and restaurants. Our team of
-            experienced consultants brings a wealth of industry knowledge and
-            expertise to help you navigate the complexities of the hospitality
-            sector. Whether you're looking to optimize operations, enhance
-            customer experience, or boost profitability, we provide tailored
-            strategies that address your unique challenges and goals. From
-            streamlining processes and improving inventory management to
-            developing effective marketing campaigns and refining your brand
-            identity, our consulting services are aimed at driving your business
-            towards sustained success and growth.
+            Choose Prestige Lodge because we are dedicated to empowering
+            hospitality businesses by connecting them with top-tier service
+            providers for exceptional digital solutions. Our unique approach
+            ensures that your establishment benefits from tailored website
+            creation, digital marketing, and branding expertise. As a local
+            company, we pride ourselves on being directly approachable and
+            deeply invested in the success of our community. With Prestige
+            Lodge, you'll receive personalized, hands-on support from
+            professionals who understand your industry's unique challenges and
+            opportunities, ensuring your business thrives in the competitive
+            online landscape.
           </p>
         </section>
       </div>
