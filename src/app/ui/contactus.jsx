@@ -34,7 +34,7 @@ export default function Contact() {
             </label>
             <input type="email" name="fmail" onChange={(e) => { setEmail(e.target.value) }}/>{" "}
             <label for="fsubj" className=" text-text">
-              Sunject :
+              Subject :
             </label>
             <input
               type="text"
