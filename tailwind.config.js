@@ -14,13 +14,17 @@ module.exports = {
       },
       screens: {
         'short': { 'raw': '(max-height: 600px)'},
-        'xs': { 'raw': '(min-width: 20px)' }
+        'xs': { 'raw': '(max-width: 374px)' },
+        '3xl' : { 'raw': '(min-width: 2000px)' }
       },
       colors: {
         text: '#27201B',
         background: "#FDFDFC",
         accent: "#E5CF6E",
         secondary: "#795E4E",
+      },
+      spacing: {
+        '128': '40rem',
       }
     },
     fontSize: {

@@ -9,6 +9,8 @@ import {
 } from "../modules/gsap";
 import { Fh1, Fh2h3, Fh6, Fparagraph } from "../modules/fonts";
 import Image from "next/image";
+import { Info } from "./uiComponents";
+import { Panel } from "./uiComponents";
 
 export default function Intro() {
   useGSAP(() => {
@@ -127,36 +129,45 @@ export default function Intro() {
           loop
           width={"100%"}
           height={"100%"}
-          className="hidden lg:block"
+          className="hidden lg:block object-cover object-bottom max-h-128"
         >
-          <source src="/video/Man-Swimming-Hotel-Pool.mp4" type="video/mp4" />
-          <source src="/video/Man-Swimming-Hotel-Pool.webm" type="video/webm" />
+          <source src="/video/Sea-View.mp4" type="video/mp4" />
+          <source src="/video/Sea-View.webm" type="video/webm" />
+          <source src="/video/Sea-View.ogg" type="video/ogg" />
           Your browser does not support videos!
-        </video>{" "}
+        </video>
         <div className="block lg:hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            width={"100%"}
-            height={"100%"}
-            className="object-cover"
-          >
-            <source src="/video/ElephantPool.mp4" type="video/mp4" />
-            <source src="/video/ElephantPool.mp4.webm" type="video/webm" />
-            Your browser does not support videos!
-          </video>
+          <Image
+            src="/images/jungle-pool.jpg"
+            width={1500}
+            height={300}
+            alt="A woman relaxing in a luxurious hotel pool in the jungle."
+            priority={true}
+            className="object-cover max-h-96"
+          />
         </div>
         <h1
-          className={`${Fh1.className} absolute top-1/4 left-1/3 text-xl lg:text-logoXL intro-txt-title intro-logo `}
+          className={`${Fh1.className} hidden lg:block lg:text-logoM intro-txt-title intro-logo `}
         >
           Prestige Lodge
         </h1>
-        <h3 className={`${Fh2h3.className} intro-txt-subtitle overlay-txt`}>
+        <h3
+          className={`${Fh2h3.className} hidden lg:block lg:text-2xl intro-txt-subtitle overlay-txt top-[40%]`}
+        >
+          The finest digital presence
+        </h3>
+        <h1
+          className={`${Fh1.className} block lg:hidden text-center intro-txt-title intro-logo-sm text-4xl sm:text-5xl md:text-6xl md:top-[20%]`}
+        >
+          Prestige Lodge
+        </h1>{" "}
+        <h3
+          className={`${Fh2h3.className} } block lg:hidden text-base text-center md:text-xl intro-txt-subtitle overlay-txt top-[36%] md:top-[25%]`}
+        >
           The finest digital presence
         </h3>
       </div>
-      <div>
+      <div className="hidden lg:block">
         <section className="panel">
           <video
             autoPlay
@@ -164,26 +175,26 @@ export default function Intro() {
             loop
             width={"100%"}
             height={"100%"}
-            className="hidden lg:block"
+            className="hidden lg:block h-full"
           >
-            <source src="/video/Sea-View.mp4" type="video/mp4" />
-            <source src="/video/Sea-View.webm" type="video/webm" />
-            <source src="/video/Sea-View.ogg" type="video/ogg" />
+            <source src="/video/Man-Swimming-Hotel-Pool.mp4" type="video/mp4" />
+            <source
+              src="/video/Man-Swimming-Hotel-Pool.webm"
+              type="video/webm"
+            />
             Your browser does not support videos!
           </video>
-          <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
-            What we do
-          </h3>
-          <p className={`${Fparagraph.className} panel-paragraph overlay-txt`}>
-            At Prestige Lodge, we specialize in connecting hospitality
+          <Panel
+            title="What we do"
+            paragraph="At Prestige Lodge, we specialize in connecting hospitality
             businesses with top-tier service providers to enhance their digital
             presence and operational efficiency. Our tailored solutions bridge
             the gap between hotels, restaurants, and other hospitality entities
             with experts in website creation, digital marketing, and branding.
             By partnering with us, hospitality businesses can access a network
             of professionals dedicated to driving their success in the
-            competitive online landscape.
-          </p>
+            competitive online landscape."
+          />
         </section>
         <section className="panel">
           <video
@@ -192,27 +203,23 @@ export default function Intro() {
             loop
             width={"100%"}
             height={"100%"}
-            className="hidden lg:block"
+            className="hidden lg:block h-full"
           >
             <source src="/video/Restaurant-Walk.mp4" type="video/mp4" />
             <source src="/video/Restaurant-Walk.webm" type="video/webm" />
             <source src="/video/Restaurant-Walk.ogg" type="video/ogg" />
             Your browser does not support videos!
           </video>
-          <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
-            Website development
-          </h3>
-          <p
-            className={`${Fparagraph.className} panel-paragraph overlay-txt overlay-txt`}
-          >
-            We redefine website development with our innovative approach. Each
+          <Panel
+            title="Website development"
+            paragraph="We redefine website development with our innovative approach. Each
             website we create is meticulously tailored exclusively for you. Far
             from being just another ordinary website, we specialize in
             delivering immersive experiences that truly encapsulate the essence
             and individuality of your business. With our dedication to precision
             and creativity, we ensure that your online presence stands out from
-            the crowd, leaving a lasting impression on your audience.
-          </p>
+            the crowd, leaving a lasting impression on your audience."
+          />
         </section>
         <section className="panel">
           <video
@@ -221,17 +228,15 @@ export default function Intro() {
             loop
             width={"100%"}
             height={"100%"}
-            className="hidden lg:block"
+            className="hidden lg:block h-full"
           >
             <source src="/video/Consultation.mp4" type="video/mp4" />
             <source src="/video/Consultation.webm" type="video/webm" />
             Your browser does not support videos!
           </video>
-          <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
-            Business Consulting
-          </h3>
-          <p className={`${Fparagraph.className} panel-paragraph overlay-txt`}>
-            At Prestige Lodge, our Business Consulting services are designed to
+          <Panel
+            title="Business Consulting"
+            paragraph="At Prestige Lodge, our Business Consulting services are designed to
             elevate your hospitality enterprise by connecting you with certified
             professionals who have years of hands-on experience in the industry.
             Our consultants provide tailored advice and strategic insights to
@@ -239,8 +244,8 @@ export default function Intro() {
             growth. Whether you're looking to improve efficiency, boost your
             online presence, or refine your brand, our experts are here to guide
             you every step of the way, ensuring your business achieves its full
-            potential.
-          </p>
+            potential."
+          />
         </section>
         <section className="panel">
           <video
@@ -249,18 +254,16 @@ export default function Intro() {
             loop
             width={"100%"}
             height={"100%"}
-            className="hidden lg:block"
+            className="hidden lg:block h-full"
           >
             <source src="/video/Watch.mp4" type="video/mp4" />
             <source src="/video/Watch.webm" type="video/webm" />
             <source src="/video/Watch.ogg" type="video/ogg" />
             Your browser does not support videos!
           </video>
-          <h3 className={`${Fh2h3.className} panel-title overlay-txt`}>
-            What makes us different!
-          </h3>
-          <p className={`${Fparagraph.className} panel-paragraph overlay-txt`}>
-            Choose Prestige Lodge because we are dedicated to empowering
+          <Panel
+            title="What makes us different"
+            paragraph="Choose Prestige Lodge because we are dedicated to empowering
             hospitality businesses by connecting them with top-tier service
             providers for exceptional digital solutions. Our unique approach
             ensures that your establishment benefits from tailored website
@@ -270,9 +273,68 @@ export default function Intro() {
             Lodge, you'll receive personalized, hands-on support from
             professionals who understand your industry's unique challenges and
             opportunities, ensuring your business thrives in the competitive
-            online landscape.
-          </p>
+            online landscape."
+          />
         </section>
+      </div>
+      <div>
+        <Info
+          title={"What we do"}
+          paragraph="At Prestige Lodge, we specialize in connecting hospitality
+            businesses with top-tier service providers to enhance their digital
+            presence and operational efficiency. Our tailored solutions bridge
+            the gap between hotels, restaurants, and other hospitality entities
+            with experts in website creation, digital marketing, and branding.
+            By partnering with us, hospitality businesses can access a network
+            of professionals dedicated to driving their success in the
+            competitive online landscape."
+          img="/images/restaurant-pexels.png"
+          alt="An elegant restaurant whith wooden furniture next to a yacht marina in the afternoon."
+          width={1500}
+          height={300}
+          reverse={true}
+        />
+        <Info
+          title={"Website development"}
+          paragraph="We redefine website development with our innovative approach. Each
+            website we create is meticulously tailored exclusively for you. Far
+            from being just another ordinary website, we specialize in
+            delivering immersive experiences that truly encapsulate the essence
+            and individuality of your business. With our dedication to precision
+            and creativity, we ensure that your online presence stands out from
+            the crowd, leaving a lasting impression on your audience."
+          img="/images/bar-pexels.png"
+          alt="An elegant bar whith wooden furniture, fabric stools and velvet chairs."
+          width={1500}
+          height={300}
+          reverse={false}
+        />
+        <Info
+          title={"Business Consulting"}
+          paragraph="At Prestige Lodge, our Business Consulting services are designed to
+            elevate your hospitality enterprise by connecting you with certified
+            professionals who have years of hands-on experience in the industry.
+            Our consultants provide tailored advice and strategic insights to
+            optimize your operations, enhance customer experiences, and drive
+            growth. Whether you're looking to improve efficiency, boost your
+            online presence, or refine your brand, our experts are here to guide
+            you every step of the way, ensuring your business achieves its full
+            potential."
+          img="/images/coffee-shop-pexels.png"
+          alt="An elegant bar whith wooden furniture, fabric stools and velvet chairs."
+          width={1500}
+          height={300}
+          reverse={true}
+        />
+        <div className="flex lg:hidden items-center text-center flex-col p-8">
+          <h5 className="px-8 text-xl">What makes us different</h5>
+          <p className="px-8 text-base">Choose Prestige Lodge because we are dedicated to empowering
+            hospitality businesses. Our unique approach
+            ensures that your establishment benefits from tailored website
+            creation, digital marketing, and branding expertise. As a local
+            company, we pride ourselves on being directly approachable and
+            deeply invested in the success of our community.</p>
+        </div>
       </div>
     </div>
   );

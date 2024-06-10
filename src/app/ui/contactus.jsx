@@ -11,15 +11,15 @@ export default function Contact() {
 
   return (
     <div className="py-12">
-      <div className={`${Fh1.className} text-6xl flex justify-center`}>
-        <h1>Contact Us</h1>
+      <div className={`${Fh1.className} flex justify-center`}>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl">Contact Us</h1>
       </div>
       <div className={`${Fh2h3.className} flex justify-center`}>
-        <h3>we would love to hear from you</h3>
+        <h3 className="text-base md:text-xl lg:text-xl">we would love to hear from you</h3>
       </div>
-      <div className="flex flex-row py-4 px-12">
+      <div className="flex flex-row py-4">
         <div className="flex flex-col w-full items-center">
-          <h6 className={`${Fh4h5.className}`}>Send us an email</h6>
+          <h6 className={`${Fh4h5.className} text-base md:text-xl lg:text-xl`}>Send us an email</h6>
           <form className="flex flex-col py-4">
             <label for="fname" className=" text-text">
               Full Name :
@@ -52,8 +52,8 @@ export default function Contact() {
         <div className="sndbtn">
           <p className={`${Fh2h3.className}`}>send</p>
         </div>
-        <h6 className={`${Fh4h5.className} pt-10`}>Give us a call</h6>
-        <p className={`${Fparagraph.className} text-xl py-8 w-3/6`}>
+        <h6 className={`${Fh4h5.className} text-center text-lg md:text-xl pt-10`}>Give us a call</h6>
+        <p className={`${Fparagraph.className} text-center text-base md:text-lg py-8 w-3/6`}>
           Atlternatively, you may reach out to us directly at (+30) 694 353 1213
           for immediate assistance with any inquiries. We are always
           available to provide prompt and personalized support, ensuring your

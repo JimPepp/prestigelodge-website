@@ -2,23 +2,23 @@
 > Funell version
 
 ## General
-- Reconstruct the scrolled function from the header in a helpers file in order to call it from many components without having to duplicate it whenever we need it. 
+- Reconstruct the scrolled function from the header in a helpers file in order to call it from many components without having to duplicate it whenever we need it. (DROPPED)
 - Considering to not use this type of scrolling animation in any other page, to simplify coding and complete the project faster. (DONE)
 - [IMPORTANT!] Redesign the whole page as a one-page funnel type of page. Keep everything as is (except of the menu) (DONE)
 - Update the header to match the above! (DONE - Completely Removed)
 - **Form email setup using nextjs (https://www.freecodecamp.org/news/how-to-build-a-working-contact-form-with-sendgrid-and-next-js/)**
 
 ## Footer
-- **Responsive design.**
+- **Responsive design.** (DONE)
 
 ## Home Page
 - On the figma design there are images. This must be replaced with videos. (DONE)
 - Consider the possibility to redesign the intro section with the videos occupying the full width of the screen. (DONE)
 - Observer / ScrollTrigger.observe() must be used to seamlessly transition between the videos and the text in each section. (DONE)
 - Find videos that will fit the intro section of the website. NOTE: All videos must be SD quality for faster loading in realtime from client (DONE) 
-- **Responsive design for smaller screens.**
+- **Responsive design for smaller screens.** (DONE)
 - Consider redesigning for coding simplicity. (DONE)
-- **What makes us different section.**
+- **What makes us different section.** (DONE)
 - Contact us form / phone number (DONE)
 
 # To Do List
