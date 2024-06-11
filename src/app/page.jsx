@@ -12,10 +12,10 @@ export default function Page() {
   })
 
   return (
-    <body>
+    <>
       <Intro />
       <Contact />
       <Footer />
-    </body>
+    </>
   )
 }

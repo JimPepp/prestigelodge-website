@@ -6,7 +6,7 @@
 - Considering to not use this type of scrolling animation in any other page, to simplify coding and complete the project faster. (DONE)
 - [IMPORTANT!] Redesign the whole page as a one-page funnel type of page. Keep everything as is (except of the menu) (DONE)
 - Update the header to match the above! (DONE - Completely Removed)
-- **Form email setup using nextjs (https://www.freecodecamp.org/news/how-to-build-a-working-contact-form-with-sendgrid-and-next-js/)**
+- **Form email setup using nextjs (https://www.freecodecamp.org/news/how-to-build-a-working-contact-form-with-sendgrid-and-next-js/)** (DONE)
 
 ## Footer
 - **Responsive design.** (DONE)
