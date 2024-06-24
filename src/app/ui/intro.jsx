@@ -186,14 +186,13 @@ export default function Intro() {
           </video>
           <Panel
             title="What we do"
-            paragraph="At Prestige Lodge, we specialize in connecting hospitality
-            businesses with top-tier service providers to enhance their digital
-            presence and operational efficiency. Our tailored solutions bridge
-            the gap between hotels, restaurants, and other hospitality entities
-            with experts in website creation, digital marketing, and branding.
-            By partnering with us, hospitality businesses can access a network
-            of professionals dedicated to driving their success in the
-            competitive online landscape."
+            paragraph="At Prestige Lodge, we specialize in website creation, 
+              digital marketing, and business consulting. We work explicitly 
+              with hospitality and dining businesses. With hands-on experience 
+              in the field, our solutions are tailored exactly to your needs, 
+              with your profitability and online presence as our sole priority. By 
+              partnering with us, you can access a network of professionals 
+              dedicated to your success in the competitive online landscape."
           />
         </section>
         <section className="panel">
@@ -212,13 +211,13 @@ export default function Intro() {
           </video>
           <Panel
             title="Website development"
-            paragraph="We redefine website development with our innovative approach. Each
-            website we create is meticulously tailored exclusively for you. Far
-            from being just another ordinary website, we specialize in
-            delivering immersive experiences that truly encapsulate the essence
-            and individuality of your business. With our dedication to precision
-            and creativity, we ensure that your online presence stands out from
-            the crowd, leaving a lasting impression on your audience."
+            paragraph="When creating a website, we are always determined to 
+              display the quality and efficiency of the services that your business 
+              provides. Moreover, rather than creating an ordinary website, we 
+              specialize in creating immersive experiences that summarize the essence 
+              and individuality of your business.We are dedicated to ensure that your 
+              business stands out from your competition, while leaving a lasting 
+              impression on your target audience."
           />
         </section>
         <section className="panel">
@@ -237,14 +236,14 @@ export default function Intro() {
           <Panel
             title="Business Consulting"
             paragraph="At Prestige Lodge, our Business Consulting services are designed to
-            elevate your hospitality enterprise by connecting you with certified
-            professionals who have years of hands-on experience in the industry.
-            Our consultants provide tailored advice and strategic insights to
-            optimize your operations, enhance customer experiences, and drive
-            growth. Whether you're looking to improve efficiency, boost your
-            online presence, or refine your brand, our experts are here to guide
-            you every step of the way, ensuring your business achieves its full
-            potential."
+              elevate your hospitality enterprise by connecting you with certified
+              professionals who have years of hands-on experience in the industry.
+              Our consultants provide tailored advice and strategic insights to
+              optimize your operations, enhance customer experiences, and drive
+              growth. Whether you're looking to improve efficiency, boost your
+              online presence, or refine your brand, our experts are here to guide
+              you every step of the way, ensuring your business achieves its full
+              potential."
           />
         </section>
         <section className="panel">
@@ -263,31 +262,27 @@ export default function Intro() {
           </video>
           <Panel
             title="What makes us different"
-            paragraph="Choose Prestige Lodge because we are dedicated to empowering
-            hospitality businesses by connecting them with top-tier service
-            providers for exceptional digital solutions. Our unique approach
-            ensures that your establishment benefits from tailored website
-            creation, digital marketing, and branding expertise. As a local
-            company, we pride ourselves on being directly approachable and
-            deeply invested in the success of our community. With Prestige
-            Lodge, you'll receive personalized, hands-on support from
-            professionals who understand your industry's unique challenges and
-            opportunities, ensuring your business thrives in the competitive
-            online landscape."
+            paragraph="Choose Prestige Lodge because we are dedicated to 
+            empowering hospitality and dining businesses with our top-tier 
+            consultants and our exceptional digital solutions. We always ensure 
+            that your business establishment benefits from our services, and 
+            that it thrives against your competition. As a local company, 
+            we pride ourselves on being directly approachable and deeply 
+            invested in your success, with support from professionals who 
+            understand the industry's unique challenges and opportunities."
           />
         </section>
       </div>
       <div>
         <Info
           title={"What we do"}
-          paragraph="At Prestige Lodge, we specialize in connecting hospitality
-            businesses with top-tier service providers to enhance their digital
-            presence and operational efficiency. Our tailored solutions bridge
-            the gap between hotels, restaurants, and other hospitality entities
-            with experts in website creation, digital marketing, and branding.
-            By partnering with us, hospitality businesses can access a network
-            of professionals dedicated to driving their success in the
-            competitive online landscape."
+          paragraph="At Prestige Lodge, we specialize in website creation, 
+            digital marketing, and business consulting. We work explicitly 
+            with hospitality and dining businesses. With hands-on experience 
+            in the field, our solutions are tailored exactly to your needs, 
+            with your profitability and online presence as our sole priority. By 
+            partnering with us, you can access a network of professionals 
+            dedicated to your success in the competitive online landscape."
           img="/images/restaurant-pexels.png"
           alt="An elegant restaurant whith wooden furniture next to a yacht marina in the afternoon."
           width={1500}
@@ -296,13 +291,13 @@ export default function Intro() {
         />
         <Info
           title={"Website development"}
-          paragraph="We redefine website development with our innovative approach. Each
-            website we create is meticulously tailored exclusively for you. Far
-            from being just another ordinary website, we specialize in
-            delivering immersive experiences that truly encapsulate the essence
-            and individuality of your business. With our dedication to precision
-            and creativity, we ensure that your online presence stands out from
-            the crowd, leaving a lasting impression on your audience."
+          paragraph="When creating a website, we are always determined to 
+            display the quality and efficiency of the services that your business 
+            provides. Moreover, rather than creating an ordinary website, we 
+            specialize in creating immersive experiences that summarize the essence 
+            and individuality of your business.We are dedicated to ensure that your 
+            business stands out from your competition, while leaving a lasting 
+            impression on your target audience."
           img="/images/bar-pexels.png"
           alt="An elegant bar whith wooden furniture, fabric stools and velvet chairs."
           width={1500}
@@ -328,12 +323,16 @@ export default function Intro() {
         />
         <div className="flex lg:hidden items-center text-center flex-col p-8">
           <h5 className="px-8 text-xl">What makes us different</h5>
-          <p className="px-8 text-base">Choose Prestige Lodge because we are dedicated to empowering
-            hospitality businesses. Our unique approach
-            ensures that your establishment benefits from tailored website
-            creation, digital marketing, and branding expertise. As a local
-            company, we pride ourselves on being directly approachable and
-            deeply invested in the success of our community.</p>
+          <p className="px-8 text-base">
+            Choose Prestige Lodge because we are dedicated to empowering
+            hospitality and dining businesses with our top-tier consultants and
+            our exceptional digital solutions. We always ensure that your
+            business establishment benefits from our services, and that it
+            thrives against your competition. As a local company, we pride
+            ourselves on being directly approachable and deeply invested in your
+            success, with support from professionals who understand the
+            industry's unique challenges and opportunities.
+          </p>
         </div>
       </div>
     </div>
