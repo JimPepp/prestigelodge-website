@@ -334,3 +334,14 @@ input:focus,
   background-color: var(--secondary-700);
   transition: .5s;
 }
+
+/*  ========
+    SERVICES
+    ======== */
+
+.hcontainer{
+  width: 400%;
+	height: 100vh;
+	display: flex;
+	flex-wrap: nowrap;
+}

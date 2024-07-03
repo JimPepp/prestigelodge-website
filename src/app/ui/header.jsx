@@ -1,17 +1,8 @@
 "use client";
 
 import { Fh1, Fh2h3, Fh6, Fparagraph } from "../modules/fonts";
-import {
-  gsap,
-  useGSAP,
-  ScrollTrigger,
-  TextPlugin,
-  Flip,
-} from "../modules/gsap";
+import { gsap, useGSAP, ScrollTrigger } from "../modules/gsap";
 import Image from "next/image";
-import { scrolled } from "../modules/helpers";
-import { useRef } from "react";
-import $ from "jquery";
 
 // By default the menu is closed
 var menuIsOpen = false;
@@ -26,7 +17,6 @@ function recenterLogo() {
 }
 
 export default function Header() {
-
   // set .menu-image height property using JS
   // height = window.height - header.height
 
@@ -85,7 +75,7 @@ export default function Header() {
       paused: true,
       duration: 1.7,
       ease: "sine",
-      zIndex: 100
+      zIndex: 100,
     });
 
     // The element with class .main-tool-bar is the header.
@@ -250,7 +240,6 @@ export default function Header() {
       }
     };
   });
-
   return (
     <div id="HEADER DIV">
       <header className="main-tool-bar">
@@ -278,22 +267,22 @@ export default function Header() {
       <div className="menu items-center justify-center lg:justify-between">
         <div className="flex justify-center text-center items-center lg:items-baseline flex-col pl-24 pr-24">
           <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
-            Home
+            <a href="/">Home</a>
           </h6>
           <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
-            About us
+            <a href="/aboutus">About us</a>
           </h6>
           <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
-            Services
+            <a href="/services">Services</a>
           </h6>
-          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
+          {/* <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
             Portfolio
           </h6>
           <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
             Testimonials
-          </h6>
+          </h6> */}
           <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
-            Contact us
+            <a href="/contactus">Contact us</a>
           </h6>
         </div>
         <div className="menu-image hidden lg:flex self-center lg:self-auto">
@@ -301,12 +290,12 @@ export default function Header() {
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
-              <h2>Hotels</h2>
+              <h2 className="text-xl lg:text-3xl">Hotels</h2>
             </div>
             <Image
               className="relative"
               id="menuImage"
-              src="/hotel-pool-pexels.png"
+              src="/images/hotel-pool-pexels.png"
               // fill = true adjusts the image dimations to the div
               // use along-side with object-fit and object-position for correct aspect ratio!
               // check : golbals.css @ .menu-image>img
@@ -318,12 +307,12 @@ export default function Header() {
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
-              <h2>Restaurants</h2>
+              <h2 className="text-xl lg:text-3xl">Restaurants</h2>
             </div>
             <Image
               className="relative"
               id="menuImage"
-              src="/restaurant-pexels.png"
+              src="/images/restaurant-pexels.png"
               // fill = true adjusts the image dimations to the div
               // use along-side with object-fit and object-position for correct aspect ratio!
               // check : golbals.css @ .menu-image>img
@@ -335,12 +324,12 @@ export default function Header() {
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
-              <h2>Cafeterias</h2>
+              <h2 className="text-xl lg:text-3xl">Cafeterias</h2>
             </div>
             <Image
               className="relative z-40"
               id="menuImage"
-              src="/coffee-shop-pexels.png"
+              src="/images/coffee-shop-pexels.png"
               // fill = true adjusts the image dimations to the div
               // use along-side with object-fit and object-position for correct aspect ratio!
               // check : golbals.css @ .menu-image>img
@@ -352,12 +341,12 @@ export default function Header() {
             <div
               className={`${Fh6.className} menu-image-txt w-full flex absolute justify-center z-50`}
             >
-              <h2>Bars And Nightclubs</h2>
+              <h2 className="text-xl lg:text-3xl">Bars And Nightclubs</h2>
             </div>
             <Image
               className="relative z-40"
               id="menuImage"
-              src="/bar-pexels.png"
+              src="/images/bar-pexels.png"
               // fill = true adjusts the image dimations to the div
               // use along-side with object-fit and object-position for correct aspect ratio!
               // check : golbals.css @ .menu-image>img

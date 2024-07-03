@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  gsap,
-  useGSAP,
-  ScrollTrigger,
-  TextPlugin,
-  Flip,
-} from "../modules/gsap";
-import { Fh1, Fh2h3, Fh6, Fparagraph } from "../modules/fonts";
+import { gsap, useGSAP } from "../modules/gsap";
+import { Fh1, Fh2h3 } from "../modules/fonts";
 import Image from "next/image";
 import { Info } from "./uiComponents";
 import { Panel } from "./uiComponents";
@@ -186,13 +180,12 @@ export default function Intro() {
           </video>
           <Panel
             title="What we do"
-            paragraph="At Prestige Lodge, we specialize in website creation, 
-              digital marketing, and business consulting. We work explicitly 
-              with hospitality and dining businesses. With hands-on experience 
-              in the field, our solutions are tailored exactly to your needs, 
-              with your profitability and online presence as our sole priority. By 
-              partnering with us, you can access a network of professionals 
-              dedicated to your success in the competitive online landscape."
+            paragraph="We specialize in website creation, digital marketing, 
+              and business consulting. We work explicitly with hospitality
+              and dining businesses. Our staff has work experience in the
+              field, therfore we have customised our services according to 
+              our experience in the industry. By partnering with us, you can 
+              access a network of professionals dedicated to your success."
           />
         </section>
         <section className="panel">
@@ -213,11 +206,11 @@ export default function Intro() {
             title="Website development"
             paragraph="When creating a website, we are always determined to 
               display the quality and efficiency of the services that your business 
-              provides. Moreover, rather than creating an ordinary website, we 
-              specialize in creating immersive experiences that summarize the essence 
-              and individuality of your business.We are dedicated to ensure that your 
-              business stands out from your competition, while leaving a lasting 
-              impression on your target audience."
+              provides. Rather than creating an ordinary website, we will create 
+              an immersive experience that summarizes the essence of your
+              business. We are dedicated to ensure that your business stands 
+              out from your competition, while leaving a lasting impression on 
+              your target audience."
           />
         </section>
         <section className="panel">
@@ -235,15 +228,14 @@ export default function Intro() {
           </video>
           <Panel
             title="Business Consulting"
-            paragraph="At Prestige Lodge, our Business Consulting services are designed to
-              elevate your hospitality enterprise by connecting you with certified
+            paragraph="Our Business Consulting services are designed to
+              elevate your hospitality enterprise by connecting you with
               professionals who have years of hands-on experience in the industry.
-              Our consultants provide tailored advice and strategic insights to
-              optimize your operations, enhance customer experiences, and drive
-              growth. Whether you're looking to improve efficiency, boost your
-              online presence, or refine your brand, our experts are here to guide
-              you every step of the way, ensuring your business achieves its full
-              potential."
+              Our consultants will give you advice and insights to optimize your 
+              operations, enhance customer experiences, and drive growth. Whether 
+              you're looking to improve efficiency, boost your online presence, 
+              or refine your brand, our experts are here to guide you every step 
+              of the way, ensuring your business achieves its full potential."
           />
         </section>
         <section className="panel">
@@ -262,27 +254,23 @@ export default function Intro() {
           </video>
           <Panel
             title="What makes us different"
-            paragraph="Choose Prestige Lodge because we are dedicated to 
-            empowering hospitality and dining businesses with our top-tier 
-            consultants and our exceptional digital solutions. We always ensure 
-            that your business establishment benefits from our services, and 
-            that it thrives against your competition. As a local company, 
-            we pride ourselves on being directly approachable and deeply 
-            invested in your success, with support from professionals who 
-            understand the industry's unique challenges and opportunities."
+            paragraph="We are dedicated to empowering hospitality and dining 
+            businesses. We always ensure that your business establishment 
+            benefits from our services, and that it thrives against your 
+            competition. As a local company, we pride ourselves on being 
+            directly approachable and deeply invested in your succes."
           />
         </section>
       </div>
       <div>
         <Info
           title={"What we do"}
-          paragraph="At Prestige Lodge, we specialize in website creation, 
-            digital marketing, and business consulting. We work explicitly 
-            with hospitality and dining businesses. With hands-on experience 
-            in the field, our solutions are tailored exactly to your needs, 
-            with your profitability and online presence as our sole priority. By 
-            partnering with us, you can access a network of professionals 
-            dedicated to your success in the competitive online landscape."
+          paragraph="We specialize in website creation, digital marketing, 
+            and business consulting. We work explicitly with hospitality
+            and dining businesses. Our staff has work experience in the
+            field, therfore we have customised our services according to 
+            our experience in the industry. By partnering with us, you can 
+            access a network of professionals dedicated to your success."
           img="/images/restaurant-pexels.png"
           alt="An elegant restaurant whith wooden furniture next to a yacht marina in the afternoon."
           width={1500}
@@ -293,11 +281,11 @@ export default function Intro() {
           title={"Website development"}
           paragraph="When creating a website, we are always determined to 
             display the quality and efficiency of the services that your business 
-            provides. Moreover, rather than creating an ordinary website, we 
-            specialize in creating immersive experiences that summarize the essence 
-            and individuality of your business.We are dedicated to ensure that your 
-            business stands out from your competition, while leaving a lasting 
-            impression on your target audience."
+            provides. Rather than creating an ordinary website, we will create 
+            an immersive experience that summarizes the essence of your
+            business. We are dedicated to ensure that your business stands 
+            out from your competition, while leaving a lasting impression on 
+            your target audience."
           img="/images/bar-pexels.png"
           alt="An elegant bar whith wooden furniture, fabric stools and velvet chairs."
           width={1500}
@@ -306,15 +294,14 @@ export default function Intro() {
         />
         <Info
           title={"Business Consulting"}
-          paragraph="At Prestige Lodge, our Business Consulting services are designed to
-            elevate your hospitality enterprise by connecting you with certified
+          paragraph="Our Business Consulting services are designed to
+            elevate your hospitality enterprise by connecting you with
             professionals who have years of hands-on experience in the industry.
-            Our consultants provide tailored advice and strategic insights to
-            optimize your operations, enhance customer experiences, and drive
-            growth. Whether you're looking to improve efficiency, boost your
-            online presence, or refine your brand, our experts are here to guide
-            you every step of the way, ensuring your business achieves its full
-            potential."
+            Our consultants will give you advice and insights to optimize your 
+            operations, enhance customer experiences, and drive growth. Whether 
+            you're looking to improve efficiency, boost your online presence, 
+            or refine your brand, our experts are here to guide you every step 
+            of the way, ensuring your business achieves its full potential."
           img="/images/coffee-shop-pexels.png"
           alt="An elegant bar whith wooden furniture, fabric stools and velvet chairs."
           width={1500}
@@ -324,14 +311,11 @@ export default function Intro() {
         <div className="flex lg:hidden items-center text-center flex-col p-8">
           <h5 className="px-8 text-xl">What makes us different</h5>
           <p className="px-8 text-base">
-            Choose Prestige Lodge because we are dedicated to empowering
-            hospitality and dining businesses with our top-tier consultants and
-            our exceptional digital solutions. We always ensure that your
-            business establishment benefits from our services, and that it
-            thrives against your competition. As a local company, we pride
-            ourselves on being directly approachable and deeply invested in your
-            success, with support from professionals who understand the
-            industry's unique challenges and opportunities.
+            We are dedicated to empowering hospitality and dining businesses. We
+            always ensure that your business establishment benefits from our
+            services, and that it thrives against your competition. As a local
+            company, we pride ourselves on being directly approachable and
+            deeply invested in your succes.
           </p>
         </div>
       </div>

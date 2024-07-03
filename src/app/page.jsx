@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from "react";
-import { Intro, Contact, Footer } from "./ui/uiComponents";
+import { Header, Intro, Contact, Footer } from "./ui/uiComponents";
 
 export default function Page() {
 
@@ -13,6 +13,7 @@ export default function Page() {
 
   return (
     <>
+      <Header />
       <Intro />
       <Contact />
       <Footer />
