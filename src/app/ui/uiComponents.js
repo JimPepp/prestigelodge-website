@@ -3,7 +3,8 @@ import Footer from "./footer";
 import Intro from "./intro";
 import Test from "./test";
 import Contact from "./contactus.jsx";
-import Info from "./info.jsx"
-import Panel from "./panel.jsx"
+import Info from "./info.jsx";
+import Panel from "./panel.jsx";
+import ScrollSection from "./scrollsection";
 
-export { Header, Footer, Intro, Test, Contact, Info, Panel };
+export { Header, Footer, Intro, Test, Contact, Info, Panel, ScrollSection };
