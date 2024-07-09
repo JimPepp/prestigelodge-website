@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="flex flex-row py-0 justify-center items-center">
         <div className=" w-2/12 h-0.5 bg-text"></div>
         <h1
-          className={`${Fh1.className} text-2xl md:text-3xl lg:text-4xl px-4 md:px-6 lg:px-10`}
+          className={`${Fh1.className} text-2xl md:text-3xl lg:text-4xl px-4 md:px-6 lg:px-10 text-center`}
         >
           Prestige Lodge
         </h1>
@@ -16,9 +16,9 @@ export default function Footer() {
       </div>
       <div className="flex flex-row justify-center">
         <h3
-          className={`${Fh1.className} text-lg md:text-xl lg:text-2xl text-secondary`}
+          className={`${Fh1.className} text-lg md:text-xl lg:text-2xl text-secondary text-center`}
         >
-          Where Digital Sophistication Meets Hospitality Excellence
+          Elevating Hospitality and Dining
         </h3>
       </div>
       <div className="flex justify-center pt-5 pb-2">
@@ -59,7 +59,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className="flex flex-col items-center py-5">
+      <div className="flex flex-col items-center text-center py-5">
         <p>© 2024 Prestige Lodge. All rights reserved.</p>
       </div>
     </div>

@@ -95,7 +95,7 @@ export default function Contact() {
       </div>
       <div className={`${Fh2h3.className} flex justify-center`}>
         <h3 className="text-base md:text-xl lg:text-xl">
-          we would love to hear from you
+          Interested in doing business?
         </h3>
       </div>
       <div className="flex flex-row py-4">
@@ -162,7 +162,7 @@ export default function Contact() {
         <h6
           className={`${Fh4h5.className} text-center text-lg md:text-xl pt-10`}
         >
-          Give us a call
+          or give us a call
         </h6>
         <p
           className={`${Fparagraph.className} text-center text-base md:text-lg py-8 w-3/6`}

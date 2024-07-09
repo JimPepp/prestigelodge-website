@@ -5,6 +5,7 @@ import { Fh1, Fh2h3 } from "../modules/fonts";
 import Image from "next/image";
 import { Info } from "./uiComponents";
 import { Panel } from "./uiComponents";
+import { Fh4h5 } from "../styles/fonts";
 
 export default function Intro() {
   useGSAP(() => {
@@ -123,7 +124,7 @@ export default function Intro() {
           loop
           width={"100%"}
           height={"100%"}
-          className="hidden lg:block object-cover object-bottom max-h-128"
+          className="hidden lg:block object-cover object-bottom max-h-128 hover:max-h-128"
         >
           <source src="/video/Sea-View.mp4" type="video/mp4" />
           <source src="/video/Sea-View.webm" type="video/webm" />
@@ -141,183 +142,10 @@ export default function Intro() {
           />
         </div>
         <h1
-          className={`${Fh1.className} hidden lg:block lg:text-logoM intro-txt-title intro-logo `}
+          className={`${Fh2h3.className} block  sm:text-xl lg:text-4xl intro-txt-title intro-logo text-center w-full lg:w-1/2 px-8 lg:p-0`}
         >
-          Prestige Lodge
+          Increase the attention towards your business, as well as your clientele!
         </h1>
-        <h3
-          className={`${Fh2h3.className} hidden lg:block lg:text-2xl intro-txt-subtitle overlay-txt top-[40%]`}
-        >
-          The finest digital presence
-        </h3>
-        <h1
-          className={`${Fh1.className} block lg:hidden text-center intro-txt-title intro-logo-sm text-4xl sm:text-5xl md:text-6xl md:top-[20%]`}
-        >
-          Prestige Lodge
-        </h1>{" "}
-        <h3
-          className={`${Fh2h3.className} } block lg:hidden text-base text-center md:text-xl intro-txt-subtitle overlay-txt top-[36%] md:top-[25%]`}
-        >
-          The finest digital presence
-        </h3>
-      </div>
-      <div className="hidden lg:block">
-        <section className="panel">
-          <video
-            autoPlay
-            muted
-            loop
-            width={"100%"}
-            height={"100%"}
-            className="hidden lg:block h-full"
-          >
-            <source src="/video/Man-Swimming-Hotel-Pool.mp4" type="video/mp4" />
-            <source
-              src="/video/Man-Swimming-Hotel-Pool.webm"
-              type="video/webm"
-            />
-            Your browser does not support videos!
-          </video>
-          <Panel
-            title="What we do"
-            paragraph="We specialize in website creation, digital marketing, 
-              and business consulting. We work explicitly with hospitality
-              and dining businesses. Our staff has work experience in the
-              field, therfore we have customised our services according to 
-              our experience in the industry. By partnering with us, you can 
-              access a network of professionals dedicated to your success."
-          />
-        </section>
-        <section className="panel">
-          <video
-            autoPlay
-            muted
-            loop
-            width={"100%"}
-            height={"100%"}
-            className="hidden lg:block h-full"
-          >
-            <source src="/video/Restaurant-Walk.mp4" type="video/mp4" />
-            <source src="/video/Restaurant-Walk.webm" type="video/webm" />
-            <source src="/video/Restaurant-Walk.ogg" type="video/ogg" />
-            Your browser does not support videos!
-          </video>
-          <Panel
-            title="Website development"
-            paragraph="When creating a website, we are always determined to 
-              display the quality and efficiency of the services that your business 
-              provides. Rather than creating an ordinary website, we will create 
-              an immersive experience that summarizes the essence of your
-              business. We are dedicated to ensure that your business stands 
-              out from your competition, while leaving a lasting impression on 
-              your target audience."
-          />
-        </section>
-        <section className="panel">
-          <video
-            autoPlay
-            muted
-            loop
-            width={"100%"}
-            height={"100%"}
-            className="hidden lg:block h-full"
-          >
-            <source src="/video/Consultation.mp4" type="video/mp4" />
-            <source src="/video/Consultation.webm" type="video/webm" />
-            Your browser does not support videos!
-          </video>
-          <Panel
-            title="Business Consulting"
-            paragraph="Our Business Consulting services are designed to
-              elevate your hospitality enterprise by connecting you with
-              professionals who have years of hands-on experience in the industry.
-              Our consultants will give you advice and insights to optimize your 
-              operations, enhance customer experiences, and drive growth. Whether 
-              you're looking to improve efficiency, boost your online presence, 
-              or refine your brand, our experts are here to guide you every step 
-              of the way, ensuring your business achieves its full potential."
-          />
-        </section>
-        <section className="panel">
-          <video
-            autoPlay
-            muted
-            loop
-            width={"100%"}
-            height={"100%"}
-            className="hidden lg:block h-full"
-          >
-            <source src="/video/Watch.mp4" type="video/mp4" />
-            <source src="/video/Watch.webm" type="video/webm" />
-            <source src="/video/Watch.ogg" type="video/ogg" />
-            Your browser does not support videos!
-          </video>
-          <Panel
-            title="What makes us different"
-            paragraph="We are dedicated to empowering hospitality and dining 
-            businesses. We always ensure that your business establishment 
-            benefits from our services, and that it thrives against your 
-            competition. As a local company, we pride ourselves on being 
-            directly approachable and deeply invested in your succes."
-          />
-        </section>
-      </div>
-      <div>
-        <Info
-          title={"What we do"}
-          paragraph="We specialize in website creation, digital marketing, 
-            and business consulting. We work explicitly with hospitality
-            and dining businesses. Our staff has work experience in the
-            field, therfore we have customised our services according to 
-            our experience in the industry. By partnering with us, you can 
-            access a network of professionals dedicated to your success."
-          img="/images/restaurant-pexels.png"
-          alt="An elegant restaurant whith wooden furniture next to a yacht marina in the afternoon."
-          width={1500}
-          height={300}
-          reverse={true}
-        />
-        <Info
-          title={"Website development"}
-          paragraph="When creating a website, we are always determined to 
-            display the quality and efficiency of the services that your business 
-            provides. Rather than creating an ordinary website, we will create 
-            an immersive experience that summarizes the essence of your
-            business. We are dedicated to ensure that your business stands 
-            out from your competition, while leaving a lasting impression on 
-            your target audience."
-          img="/images/bar-pexels.png"
-          alt="An elegant bar whith wooden furniture, fabric stools and velvet chairs."
-          width={1500}
-          height={300}
-          reverse={false}
-        />
-        <Info
-          title={"Business Consulting"}
-          paragraph="Our Business Consulting services are designed to
-            elevate your hospitality enterprise by connecting you with
-            professionals who have years of hands-on experience in the industry.
-            Our consultants will give you advice and insights to optimize your 
-            operations, enhance customer experiences, and drive growth. Whether 
-            you're looking to improve efficiency, boost your online presence, 
-            or refine your brand, our experts are here to guide you every step 
-            of the way, ensuring your business achieves its full potential."
-          img="/images/coffee-shop-pexels.png"
-          alt="An elegant bar whith wooden furniture, fabric stools and velvet chairs."
-          width={1500}
-          height={300}
-          reverse={true}
-        />
-        <div className="flex lg:hidden items-center text-center flex-col p-8">
-          <h5 className="px-8 text-xl">What makes us different</h5>
-          <p className="px-8 text-base">
-            We are dedicated to empowering hospitality and dining businesses. We
-            always ensure that your business establishment benefits from our
-            services, and that it thrives against your competition. As a local
-            company, we pride ourselves on being directly approachable and
-            deeply invested in your succes.
-          </p>
-        </div>
       </div>
     </div>
   );

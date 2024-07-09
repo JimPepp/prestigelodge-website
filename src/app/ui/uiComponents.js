@@ -6,5 +6,6 @@ import Contact from "./contactus.jsx";
 import Info from "./info.jsx";
 import Panel from "./panel.jsx";
 import ScrollSection from "./scrollsection";
+import CTA from "./cta";
 
-export { Header, Footer, Intro, Test, Contact, Info, Panel, ScrollSection };
+export { Header, Footer, Intro, Test, Contact, Info, Panel, ScrollSection, CTA };
