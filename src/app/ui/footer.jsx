@@ -25,11 +25,19 @@ export default function Footer() {
         <p className="lg:text-[1.1rem]">Follow us</p>
       </div>
       <div className="flex flex-row justify-center">
-        {/* <p className="px-5 nav-item">Facebook</p> */}
+        <p className="px-5 nav-item">
+          <a href="https://www.facebook.com/people/Prestige-Lodge/61562480964147/">
+            Facebook
+          </a>
+        </p>
         <p className="px-8 nav-item lg:text-[1.1rem]">
           <a href="https://x.com/prestigelodge">X</a>
         </p>
-        {/* <p className="px-5 nav-item">Instagram</p> */}
+        <p className="px-5 nav-item">
+          <a href="https://www.linkedin.com/company/prestige-lodge">
+            Linked In
+          </a>
+        </p>
       </div>
       <div className="flex flex-col items-center py-5">
         <p className="nav-item lg:text-[1.1rem]">
