@@ -91,16 +91,16 @@ export default function Contact() {
   return (
     <div className="py-12">
       <div className={`${Fh1.className} flex justify-center`}>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl">Contact Us</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-6xl">Contact Us</h1>
       </div>
       <div className={`${Fh2h3.className} flex justify-center`}>
-        <h3 className="text-base md:text-xl lg:text-xl">
+        <h3 className="text-base md:text-xl lg:text-2xl">
           Interested in doing business?
         </h3>
       </div>
       <div className="flex flex-row py-4">
         <div className="flex flex-col w-full items-center">
-          <h6 className={`${Fh4h5.className} text-base md:text-xl lg:text-xl`}>
+          <h6 className={`${Fh4h5.className} text-base md:text-xl lg:text-2xl`}>
             Send us an email
           </h6>
           <form className="flex flex-col py-4" onSubmit={handleSubmit}>
@@ -160,18 +160,16 @@ export default function Contact() {
       </div>
       <div className="flex items-center py-4 flex-col">
         <h6
-          className={`${Fh4h5.className} text-center text-lg md:text-xl pt-10`}
+          className={`${Fh4h5.className} text-center text-lg md:text-xl lg:text-2xl pt-10`}
         >
           or give us a call
         </h6>
         <p
-          className={`${Fparagraph.className} text-center text-base md:text-lg py-8 w-3/6`}
+          className={`${Fparagraph.className} text-center text-base md:text-lg lg:text-xl py-8 w-3/6`}
         >
           Atlternatively, you may reach out to us directly at (+30) 694 353 1213
-          for immediate assistance with any inquiries. We are always available
-          to provide prompt and personalized support, ensuring your questions
-          are addressed swiftly. We look forward to helping you elevate your
-          hospitality or dining business to new heights.
+          for immediate assistance with any inquiries. We look forward to working 
+          with you.
         </p>
       </div>
     </div>

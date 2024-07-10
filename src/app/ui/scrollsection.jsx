@@ -60,8 +60,8 @@ function ScrollSection() {
                 </video>
               </div>
               <div className="w-full flex justify-center flex-col items-center -left-1/4 px-10 lg:px-0">
-                <h1 className="text-xl lg:text-3xl">Website Creation</h1>
-                <p className="py-4 lg:py-9 lg:px-40 text-center">
+                <h1 className="text-xl lg:text-4xl">Website Creation</h1>
+                <p className="py-4 lg:py-9 lg:px-40 text-center lg:text-xl">
                   Using the latest technologies, we can create a website for
                   your buisness. The websites that we create are not just
                   ordinary websites, but modern experiences. We always
@@ -70,7 +70,7 @@ function ScrollSection() {
                   be left with a positive impression, therefore converting them
                   to a customer.
                 </p>
-                <p className="lg:py-3 lg:px-40 text-center">
+                <p className="lg:py-3 lg:px-40 text-center lg:text-xl">
                   With such a website you can easily stand out from your
                   competition!
                 </p>
@@ -103,8 +103,8 @@ function ScrollSection() {
                 </video>
               </div>
               <div className="w-full flex justify-center flex-col items-center -left-1/4 px-10 lg:px-0">
-                <h1 className="text-xl lg:text-3xl">Marketing</h1>
-                <p className="py-4 lg:py-9 lg:px-40 text-center">
+                <h1 className="text-xl lg:text-4xl">Marketing</h1>
+                <p className="py-4 lg:py-9 lg:px-40 text-center lg:text-xl">
                   In today's day and age, attention is the currency for your
                   business. However you may have a lot of things on your table
                   while managing your business. That's where we come in with our
@@ -112,7 +112,7 @@ function ScrollSection() {
                   draw as much as possible attention to your business. Attention
                   is key, and we can help you get it!
                 </p>
-                <p className="lg:py-3 lg:px-40 text-center">
+                <p className="lg:py-3 lg:px-40 text-center lg:text-xl">
                   Get ahead from your competition!
                 </p>
                 <Image
@@ -144,8 +144,8 @@ function ScrollSection() {
                 </video>
               </div>
               <div className="w-full flex justify-center flex-col items-center -left-1/4 px-10 lg:px-0">
-                <h1 className="text-xl lg:text-3xl">Business Consulting</h1>
-                <p className="py-4 lg:py-9 lg:px-40 text-center">
+                <h1 className="text-xl lg:text-4xl">Business Consulting</h1>
+                <p className="py-4 lg:py-9 lg:px-40 text-center lg:text-xl">
                   If you're facing issues that you don't know how to handle or
                   if you would like a professional advice, our business
                   consulting services are for you. Due to our years of hands on
@@ -154,7 +154,7 @@ function ScrollSection() {
                   Professionals such as executive chefs, bar managers, and other
                   business owners with multiple successfull businesses.
                 </p>
-                <p className="lg:py-3 lg:px-40 text-center">
+                <p className="lg:py-3 lg:px-40 text-center lg:text-xl">
                   Get inshights from experienced professionals!
                 </p>
                 <Image

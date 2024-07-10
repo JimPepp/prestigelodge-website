@@ -73,7 +73,7 @@ export default function Header() {
     const menuContainer = gsap.to(".menu", {
       left: 0,
       paused: true,
-      duration: 1.7,
+      duration: 1,
       ease: "sine",
       zIndex: 100,
     });
@@ -266,22 +266,22 @@ export default function Header() {
       </header>
       <div className="menu items-center justify-center lg:justify-between">
         <div className="flex justify-center text-center items-center lg:items-baseline flex-col pl-24 pr-24">
-          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
+          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
             <a href="/">Home</a>
           </h6>
-          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
+          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
             <a href="/aboutus">About us</a>
           </h6>
-          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
+          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
             <a href="/services">Services</a>
           </h6>
-          {/* <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
+          {/* <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
             Portfolio
           </h6>
-          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
+          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
             Testimonials
           </h6> */}
-          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4`}>
+          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
             <a href="/contactus">Contact us</a>
           </h6>
         </div>

@@ -9,7 +9,7 @@ export default function CTA() {
         <h1 className={`${Fh2h3.className} text-center lg:text-xl`}>
           Contact us for a free marketing consultation!
         </h1>
-        <p className={`${Fh2h3.className} nav-item py-3 lg:text-xl`}>
+        <p className={`${Fh2h3.className} nav-item py-3 lg:text-2xl`}>
           <u>
             <a href="/contactus">Contact us now!</a>
           </u>

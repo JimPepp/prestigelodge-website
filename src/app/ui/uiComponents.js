@@ -7,5 +7,6 @@ import Info from "./info.jsx";
 import Panel from "./panel.jsx";
 import ScrollSection from "./scrollsection";
 import CTA from "./cta";
+import Profile from "./profile";
 
-export { Header, Footer, Intro, Test, Contact, Info, Panel, ScrollSection, CTA };
+export { Header, Footer, Intro, Test, Contact, Info, Panel, ScrollSection, CTA, Profile };
