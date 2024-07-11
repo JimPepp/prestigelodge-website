@@ -1,5 +1,11 @@
 import { Header, Footer, ScrollSection, CTA } from "../ui/uiComponents";
 
+export const metadata = {
+  title: "Website Creation - Hospitality Marketing - Business Consultants",
+  description:
+    "Visit our website to learn more on how we can help hospitality businesses with their marketing campaigns and online presence management. Hotel marketing, restaurant marketing, website creation for hotels and restaurants.",
+};
+
 export default function Services() {
   return (
     <>

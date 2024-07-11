@@ -1,13 +1,21 @@
 import { Header, Contact, CTA, Footer, Profile } from "../ui/uiComponents";
 import { Fh1, Fh2h3 } from "../styles/fonts";
 
+export const metadata = {
+  title: "The team",
+  description:
+    "See who is behind Prestige Lodge and contact us directly. We help hospitality businesses with marketing, website creation and business consulting.",
+};
+
 export default function TheTeam() {
   return (
     <>
       <Header />
       <div className="pt-32">
         <div className="flex justify-center">
-          <h1 className={`${Fh1.className} text-2xl lg:text-6xl`}>Meet the team</h1>
+          <h1 className={`${Fh1.className} text-2xl lg:text-6xl`}>
+            Meet the team
+          </h1>
         </div>
       </div>
       <div>
@@ -27,7 +35,9 @@ export default function TheTeam() {
         />
       </div>
       <div className="flex justify-center items-center text-center px-8 pt-10">
-        <p className={`${Fh2h3.className} lg:text-xl`}>Your success is our priority. Let us know how we can help!</p>
+        <p className={`${Fh2h3.className} lg:text-xl`}>
+          Your success is our priority. Let us know how we can help!
+        </p>
       </div>
       <CTA />
       <Contact />
