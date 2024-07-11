@@ -1,5 +1,3 @@
-"use client";
-
 import { Fh1 } from "../modules/fonts";
 
 export default function Footer() {
@@ -24,13 +22,13 @@ export default function Footer() {
       <div className="flex justify-center pt-5 pb-2">
         <p className="lg:text-[1.1rem]">Follow us</p>
       </div>
-      <div className="flex flex-row justify-center">
+      <div className="flex flex-row justify-center pt-2">
         <p className="px-5 nav-item">
           <a href="https://www.facebook.com/people/Prestige-Lodge/61562480964147/">
             Facebook
           </a>
         </p>
-        <p className="px-8 nav-item lg:text-[1.1rem]">
+        <p className="px-8 nav-item lg:text-[1.2rem]">
           <a href="https://x.com/prestigelodge">X</a>
         </p>
         <p className="px-5 nav-item">
@@ -45,8 +43,7 @@ export default function Footer() {
             www.prestigelodgedigital.com
           </a>
         </p>
-        <p className="lg:text-[1.1rem]">Piraeus, Attica - Greece</p>
-        <p className="lg:text-[1.1rem]">Madrid City, Madrid - Spain</p>
+        <p className="lg:text-[1.1rem]">Piraeus, Athens - Greece</p>
       </div>
       <div className="flex flex-col items-center py-5">
         <p className=" text-secondary lg:text-xl">SITEMAP</p>
@@ -55,8 +52,8 @@ export default function Footer() {
           <a className="nav-item" href="/">
             Home
           </a>
-          <a className="nav-item" href="/aboutus">
-            About us
+          <a className="nav-item" href="/theteam">
+            The Team
           </a>
           <a className="nav-item" href="/services">
             Services

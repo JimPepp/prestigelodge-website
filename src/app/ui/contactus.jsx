@@ -1,6 +1,7 @@
-import { isContext } from "vm";
-import { Fh1, Fh2h3, Fh4h5, Fh6, Fparagraph } from "../modules/fonts";
-import { useEffect, useRef, useState } from "react";
+"use client"
+
+import { Fh1, Fh2h3, Fh4h5, Fparagraph } from "../modules/fonts";
+import { useState } from "react";
 
 export default function Contact() {
   //    States for contact form fields

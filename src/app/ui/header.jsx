@@ -270,7 +270,7 @@ export default function Header() {
             <a href="/">Home</a>
           </h6>
           <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
-            <a href="/aboutus">About us</a>
+            <a href="/theteam">The Team</a>
           </h6>
           <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
             <a href="/services">Services</a>

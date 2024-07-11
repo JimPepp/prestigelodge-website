@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -41,7 +43,7 @@ function ScrollSection() {
         <div ref={triggerRef}>
           <div ref={sectionRef} className="scroll-section-inner">
             {/* Section 1 */}
-            <div className="scroll-section flex-row-reverse">
+            <div className="scroll-section">
               <div className="hidden lg:block w-1/2">
                 <video
                   autoPlay
@@ -70,7 +72,7 @@ function ScrollSection() {
                   be left with a positive impression, therefore converting them
                   to a customer.
                 </p>
-                <p className="lg:py-3 lg:px-40 text-center lg:text-xl">
+                <p className="lg:py-3 lg:px-40 text-center lg:text-2xl">
                   With such a website you can easily stand out from your
                   competition!
                 </p>
@@ -112,7 +114,7 @@ function ScrollSection() {
                   draw as much as possible attention to your business. Attention
                   is key, and we can help you get it!
                 </p>
-                <p className="lg:py-3 lg:px-40 text-center lg:text-xl">
+                <p className="lg:py-3 lg:px-40 text-center lg:text-2xl">
                   Get ahead from your competition!
                 </p>
                 <Image
@@ -147,14 +149,14 @@ function ScrollSection() {
                 <h1 className="text-xl lg:text-4xl">Business Consulting</h1>
                 <p className="py-4 lg:py-9 lg:px-40 text-center lg:text-xl">
                   If you're facing issues that you don't know how to handle or
-                  if you would like a professional advice, our business
+                  if you would like the advice of another professional, our business
                   consulting services are for you. Due to our years of hands on
                   experience working in the industry, we can connect you with
                   people that have worked in the finest establishments.
                   Professionals such as executive chefs, bar managers, and other
                   business owners with multiple successfull businesses.
                 </p>
-                <p className="lg:py-3 lg:px-40 text-center lg:text-xl">
+                <p className="lg:py-3 lg:px-40 text-center lg:text-2xl">
                   Get inshights from experienced professionals!
                 </p>
                 <Image

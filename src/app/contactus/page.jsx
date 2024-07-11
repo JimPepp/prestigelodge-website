@@ -1,4 +1,3 @@
-"use client";
 
 import { Header, Contact, Footer } from "../ui/uiComponents";
 

@@ -124,7 +124,7 @@ export default function Intro() {
           loop
           width={"100%"}
           height={"100%"}
-          className="hidden lg:block object-cover object-bottom max-h-128 hover:max-h-128"
+          className="hidden lg:block object-cover object-center max-h-[50rem]"
         >
           <source src="/video/Sea-View.mp4" type="video/mp4" />
           <source src="/video/Sea-View.webm" type="video/webm" />

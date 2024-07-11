@@ -1,5 +1,3 @@
-'use client'
-
 import { Fh2h3, Fparagraph } from "../modules/fonts";
 
 export default function Panel(props) {

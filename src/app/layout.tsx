@@ -1,13 +1,14 @@
 import { Fparagraph } from "./styles/fonts";
 import "./globals.css";
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata : Metadata = {
   title: {
     template: "%s | Prestige Lodge",
     default: "Digital Solutions for Hospitality businesses | Prestige Lodge",
   },
   description:
-    "Digital solutions tailored for the hospitality industry. From website creation to digital marketing, we're here to elevate your online presence and drive success.",
+    "Solutions tailored for the hospitality industry. Website creation. Hotel marketing. Restaurant marketing.",
 };
 
 export default function RootLayout({ children }) {

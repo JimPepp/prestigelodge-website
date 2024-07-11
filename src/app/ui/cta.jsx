@@ -1,5 +1,3 @@
-"use client";
-
 import { Fh2h3 } from "../styles/fonts";
 
 export default function CTA() {

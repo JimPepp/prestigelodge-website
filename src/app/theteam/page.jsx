@@ -1,10 +1,7 @@
-"use client";
-
-// import { useEffect } from "react";
 import { Header, Contact, CTA, Footer, Profile } from "../ui/uiComponents";
 import { Fh1, Fh2h3 } from "../styles/fonts";
 
-export default function AboutUs() {
+export default function TheTeam() {
   return (
     <>
       <Header />
@@ -22,18 +19,11 @@ export default function AboutUs() {
           left={false}
         />
         <Profile
-          name="Vasilis Mitas"
-          img="/images/formal-table.png"
-          info="Web developer"
-          email="vasilis@prestigelodgedigital.com"
-          left={true}
-        />
-        <Profile
-          name="Polybius Stamulakatos"
+          name="Polybius Stamoulakatos"
           img="/images/polybius.jpg"
-          info="Marketing specialist"
-          email="polybius@presstigelodgedigital.com"
-          left={false}
+          info="Marketing Specialist"
+          email="polybius@prestigelodgedigital.com"
+          left={true}
         />
       </div>
       <div className="flex justify-center items-center text-center px-8 pt-10">
