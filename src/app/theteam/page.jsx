@@ -2,9 +2,9 @@ import { Header, Contact, CTA, Footer, Profile } from "../ui/uiComponents";
 import { Fh1, Fh2h3 } from "../styles/fonts";
 
 export const metadata = {
-  title: "The team",
+  title: "Meet the team of Prestige Lodge!",
   description:
-    "See who is behind Prestige Lodge and contact us directly. We help hospitality businesses with marketing, website creation and business consulting.",
+    `See who is behind Prestige Lodge and contact us directly.`,
 };
 
 export default function TheTeam() {

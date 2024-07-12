@@ -1,9 +1,13 @@
 import { Header, Footer, ScrollSection, CTA } from "../ui/uiComponents";
 
 export const metadata = {
-  title: "Website Creation - Hospitality Marketing - Business Consultants",
+  title: "Website Creation - Hospitality Marketing - Business Consulting Services for Hospitality Establishments.",
   description:
-    "Visit our website to learn more on how we can help hospitality businesses with their marketing campaigns and online presence management. Hotel marketing, restaurant marketing, website creation for hotels and restaurants.",
+  `Visit our website to learn more on how we can help hospitality businesses with their marketing campaigns and online presence management. 
+  Αναλαμβάνουμε διαφημηστικές καμπάνιες και την διαδυκτιακή παρουσία του ξενοδοχείου ή του εστιατορίου σας. Επισκευτείτε την ιστοσελίδα μας
+  για να μάθετε περισσότερα. Website creation. Hotel marketing. Restaurant marketing. Athens Hospitality Marketing. Διαφήμιση Ξενοδοχείου. 
+  Διαφήμιση Εστιατορίου. Μάρκετινγκ Τουρισμός. Μαρκετινγκ Αθήνα. Δημηουργία Ιστοσελίδας για εστιατόρια. Δημηουργία Ιστοσελίδας για ξενοδοχεία. 
+  Hotel marketing, restaurant marketing, website creation for hotels and restaurants.`,
 };
 
 export default function Services() {

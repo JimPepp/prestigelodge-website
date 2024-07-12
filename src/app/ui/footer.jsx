@@ -2,7 +2,7 @@ import { Fh1 } from "../modules/fonts";
 
 export default function Footer() {
   return (
-    <div id="FOOTER DIV">
+    <>
       <div className="flex flex-row py-0 justify-center items-center">
         <div className="w-[20%] md:w-[10%] lg:w-[15%] h-0.5 bg-text"></div>
         <h1
@@ -44,6 +44,7 @@ export default function Footer() {
           </a>
         </p>
         <p className="lg:text-[1.1rem]">Piraeus, Athens - Greece</p>
+        <p className="lg:text-[1.1rem]">Madrid City, Madrid - Spain</p>
       </div>
       <div className="flex flex-col items-center py-5">
         <p className=" text-secondary lg:text-xl">SITEMAP</p>
@@ -66,6 +67,6 @@ export default function Footer() {
       <div className="flex flex-col items-center text-center py-5 lg:text-[1.1rem]">
         <p>© 2024 Prestige Lodge. All rights reserved.</p>
       </div>
-    </div>
+    </>
   );
 }

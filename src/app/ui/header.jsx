@@ -241,7 +241,7 @@ export default function Header() {
     };
   });
   return (
-    <div id="HEADER DIV">
+    <>
       <header className="main-tool-bar">
         <div className="w-full flex flex-row-reverse items-center sm:pl-24 sm:pr-24 pl-8 pr-8 flex-nowrap m-0 p-0 border-2 header">
           <div className="w-full flex logo">
@@ -369,6 +369,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
