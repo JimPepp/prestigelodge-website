@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: {
     template: "%s",
-    default: "Services for Hospitality Businesses | Prestige Lodge",
+    default: "Marketing Services for Hospitality Businesses | Prestige Lodge",
   },
   description: `Marketing solutions tailored for the hospitality industry. Υπηρεσίες μάρκετινγκ και διαφήμησης για
   τον κλάδο της φιλοξενίας και της εστίασης. Website creation. Hotel marketing. Restaurant marketing. Athens Hospitality Marketing. 
@@ -17,6 +17,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta
+          property="og:title"
+          content="Marketing Services for Hospitality Businesses | Prestige Lodge"
+        />
+        <meta
+          property="og:description"
+          content="Marketing solutions tailored for the hospitality industry. Website creation. Hotel marketing. Restaurant marketing. Hospitality Business Consulting. Piraeus, Athens - Greece | Madrid City, Madrid - Spain"
+        />
+        <meta
+          property="og:image"
+          content="/images/android-chrome-512x512.png"
+        />
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link
           rel="apple-touch-icon"
