@@ -1,4 +1,4 @@
-
+  
 import { Header, Intro, CTA, Footer } from "./ui/uiComponents";
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ export default function Page() {
             What do we offer?
           </h1>
           <p className="text-center lg:text-xl">
-            As your partner we can manage your marketing campaings, your website
+            As your partner we can manage your marketing campaigns, your website
             and your social media, allowing you to focus on running your
             business.
           </p>
