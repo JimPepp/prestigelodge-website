@@ -323,10 +323,9 @@ input:focus,
 .sndbtn {
   background-color: var(--secondary-200);
   border: solid 2px var(--text-950);
-  width: 100px;
   height: 30px;
   color: var(--text-950);
-  padding: 0;
+  padding: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;

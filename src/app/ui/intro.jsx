@@ -138,9 +138,9 @@ export default function Intro() {
           />
         </div>
         <h1
-          className={`${Fh2h3.className} block top-[25%] lg:top-[30%] sm:text-xl lg:text-4xl intro-txt-title overlay-txt text-center w-full lg:w-1/2 px-8 lg:p-0 3xl:top-[25%]`}
+          className={`${Fh2h3.className} block top-[25%] lg:top-[30%] sm:text-xl lg:text-4xl intro-txt-title overlay-txt text-center w-full lg:w-1/2 px-8 lg:p-0 3xl:top-[15%]`}
         >
-          Increase attention towards your business. Learn more below!
+          Increase attention towards your business
         </h1>
       </div>
     </>

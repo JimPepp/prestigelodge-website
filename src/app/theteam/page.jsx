@@ -35,7 +35,7 @@ export default function TheTeam() {
         />
       </div>
       <div className="flex justify-center items-center text-center px-8 pt-10">
-        <p className={`${Fh2h3.className} lg:text-xl`}>
+        <p className={`${Fh2h3.className} lg:text-2xl`}>
           Your success is our priority. Let us know how we can help!
         </p>
       </div>

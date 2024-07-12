@@ -1,4 +1,3 @@
-  
 import { Header, Intro, CTA, Footer } from "./ui/uiComponents";
 import Image from "next/image";
 
@@ -7,6 +6,7 @@ export default function Page() {
     <>
       <Header />
       <Intro />
+      <CTA />
       <div className="flex flex-col py-8 lg:px-[20%] xl:px-[35%] 3xl:px-[40%]">
         <div className="flex flex-col justify-center px-5">
           <h1 className="text-xl lg:text-3xl text-center pt-3">What we do!</h1>
@@ -27,8 +27,6 @@ export default function Page() {
         </div>
       </div>
 
-      <CTA />
-
       <div className="flex flex-col justify-center items-center w-full py-8">
         <h1 className="text-xl lg:text-4xl text-center py-4">Why us?</h1>
 
@@ -41,10 +39,10 @@ export default function Page() {
               <div className="h-0.5 bg-text"></div>
             </div>
             <p className="text-center px-5 lg:text-xl lg:px-[10%]">
-              Our team has previous work expeirience in the hospitality industry, 
-              and has direct knowledge of how businesses such as yours operate. 
-              Therefore we correlate to your needs and concerns, brainstorming 
-              tailored solutions based on your situation.
+              Our team has previous work expeirience in the hospitality
+              industry, and has direct knowledge of how businesses such as yours
+              operate. Therefore we correlate to your needs and concerns,
+              brainstorming tailored solutions based on your situation.
             </p>
           </div>
           <div className="flex py-4 lg:py-0 items-center justify-center">
@@ -52,7 +50,9 @@ export default function Page() {
               src="/images/restaurant-pexels.png"
               width={1500}
               height={10}
-              alt={"A table in a fine restaurant with elegant decorations, restaurant marketing for booking events."}
+              alt={
+                "A table in a fine restaurant with elegant decorations, restaurant marketing for booking events."
+              }
               className="object-cover max-h-40 object-center lg:max-h-full"
             />
           </div>
@@ -78,7 +78,9 @@ export default function Page() {
               src="/images/pexels-pixabay.jpg"
               width={1500}
               height={10}
-              alt={"A luxurious hotel lobby that utilizes great hotel marketing."}
+              alt={
+                "A luxurious hotel lobby that utilizes great hotel marketing."
+              }
               className="object-cover max-h-40 object-center lg:max-h-full"
             />
           </div>
@@ -94,8 +96,8 @@ export default function Page() {
             </div>
             <p className="text-center px-5 lg:text-xl lg:px-[10%]">
               Bringing you results is our sole priority. We care about your
-              goals and we want to help you to achieve them. That's why we
-              have a drive to bring you tangible results and to see you win.
+              goals and we want to help you to achieve them. That's why we have
+              a drive to bring you tangible results and to see you win.
             </p>
           </div>{" "}
           <div className="flex py-4 lg:py-0 items-center justify-center">
