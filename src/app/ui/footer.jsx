@@ -44,7 +44,6 @@ export default function Footer() {
           </a>
         </p>
         <p className="lg:text-[1.1rem]">Piraeus, Athens - Greece</p>
-        <p className="lg:text-[1.1rem]">Madrid City, Madrid - Spain</p>
       </div>
       <div className="flex flex-col items-center py-5">
         <p className=" text-secondary lg:text-xl">SITEMAP</p>
@@ -52,9 +51,6 @@ export default function Footer() {
         <div className=" flex flex-col items-center text-base lg:text-[1.1rem] pt-4">
           <a className="nav-item" href="/">
             Home
-          </a>
-          <a className="nav-item" href="/theteam">
-            The Team
           </a>
           <a className="nav-item" href="/services">
             Services

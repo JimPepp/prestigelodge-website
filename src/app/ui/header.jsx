@@ -270,9 +270,6 @@ export default function Header() {
             <a href="/">Home</a>
           </h6>
           <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
-            <a href="/theteam">The Team</a>
-          </h6>
-          <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
             <a href="/services">Services</a>
           </h6>
           {/* <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
@@ -282,7 +279,7 @@ export default function Header() {
             Testimonials
           </h6> */}
           <h6 className={`${Fh2h3.className} nav-item mb-14 short:mb-4 lg:text-xl`}>
-            <a href="/contactus">Contact us</a>
+            <a href="/contactus">Contact</a>
           </h6>
         </div>
         <div className="menu-image hidden lg:flex self-center lg:self-auto">

@@ -104,7 +104,7 @@ export default function Contact() {
           <h6 className={`${Fh4h5.className} text-base md:text-xl lg:text-2xl`}>
             Send us an email
           </h6>
-          <form className="flex flex-col py-4" onSubmit={handleSubmit}>
+          <form className="flex flex-col py-4 text-xl" onSubmit={handleSubmit}>
             <label htmlFor="fullname" className=" text-text">
               Full Name<span className="text-red-600">*</span> :
             </label>
@@ -150,9 +150,9 @@ export default function Contact() {
                 setMessage(e.target.value);
               }}
             />
-            <button className="sndbtn" type="submit">
+            <button class="max-w-40 inline-block text-xl rounded border border-current px-8 py-3 font-medium text-text transition hover:scale-110 bg-amber-200 hover:shadow-xl focus:outline-none focus:ring active:text-amber-200">
               <p
-                className={`${Fh2h3.className}`}
+                className={`${Fh2h3.className} `}
               >{`${buttonText.valueOf()}`}</p>
             </button>
             <span className={`${Fh4h5.className, statusColor.valueOf()} font-bold`}>{`${successMsg.valueOf()}`}</span>

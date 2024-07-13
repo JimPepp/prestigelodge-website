@@ -5,113 +5,6 @@ import { Fh2h3 } from "../modules/fonts";
 import Image from "next/image";
 
 export default function Intro() {
-  useGSAP(() => {
-    // variables to animate the panel, titles, and paragraphs
-    var panels = gsap.utils.toArray(".panel");
-    var titles = gsap.utils.toArray(".panel-title");
-    var paragraphs = gsap.utils.toArray(".panel-paragraph");
-
-    // Set animation timeline for the panels.
-    panels.pop(); // get rid of the last one (don't need it in the loop)
-    panels.forEach((panel, i) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: panel,
-          start: "bottom bottom",
-          pinSpacing: false,
-          pin: true,
-          scrub: true,
-          // set the transformOrigin so that it's in the center vertically of the viewport when the element's bottom hits the bottom of the viewport
-          onRefresh: () =>
-            gsap.set(panel, {
-              transformOrigin:
-                "center " +
-                (panel.offsetHeight - window.innerHeight / 2) +
-                "px",
-            }),
-        },
-      });
-
-      // Start normal and on the end of scroll trigger
-      // make it bigger and semi-transparent
-      tl.fromTo(
-        panel,
-        {
-          y: 0,
-          rotate: 0,
-          scale: 1,
-          opacity: 1,
-        },
-        {
-          y: 0,
-          rotate: 0,
-          scale: 1.5,
-          opacity: 0.5,
-        }
-      ).to(panel, { opacity: 0, duration: 1 });
-    });
-
-    // Set the timeline animation for the titles
-    titles.pop();
-    titles.forEach((title, i) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: title,
-          start: "top center",
-          end: "center center",
-        },
-      });
-
-      // Set scale to 0, making it invisible and then
-      // slowly bring it to it's supposed style.
-      tl.fromTo(
-        title,
-        {
-          y: 0,
-          rotate: 0,
-          scale: 0,
-          duration: 1,
-        },
-        {
-          y: 0,
-          rotate: 0,
-          scale: 1,
-        }
-      );
-    });
-
-    // Timeline animation for the paragraph
-    paragraphs.pop();
-    paragraphs.forEach((paragraph, i) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: paragraph,
-          start: "top center",
-          end: "center center",
-        },
-      });
-
-      // The paragraph starts completely transparent
-      // and as we scroll down it becomes visible
-      tl.fromTo(
-        paragraph,
-        {
-          y: 0,
-          rotate: 0,
-          opacity: 0,
-          duration: 1,
-        },
-        {
-          y: 0,
-          rotate: 0,
-          opacity: 1,
-        }
-      );
-    });
-
-    // Animating the text of the intro subtitle using the scroll trigger
-  });
-
   return (
     <>
       <div>
@@ -138,9 +31,9 @@ export default function Intro() {
           />
         </div>
         <h1
-          className={`${Fh2h3.className} block top-[25%] lg:top-[30%] sm:text-xl lg:text-4xl intro-txt-title overlay-txt text-center w-full lg:w-1/2 px-8 lg:p-0 3xl:top-[15%]`}
+          className={`${Fh2h3.className} block top-[25%] sm:text-xl lg:text-4xl intro-txt-title overlay-txt text-center w-full lg:w-1/2 px-8 lg:p-0`}
         >
-          Increase attention towards your business
+          Increase attention towards your hospitality business
         </h1>
       </div>
     </>
