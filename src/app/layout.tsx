@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:description"
-          content="Marketing solutions tailored for the hospitality industry. Website creation. Hotel marketing. Restaurant marketing. Hospitality Business Consulting. Piraeus, Athens - Greece | Madrid City, Madrid - Spain"
+          content="Marketing solutions tailored for the hospitality industry. Website creation. Hotel marketing. Restaurant marketing. Hospitality Business Consulting. Piraeus, Athens - Greece"
         />
         <meta
           property="og:image"

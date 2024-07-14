@@ -19,30 +19,8 @@ export default function Footer() {
           Elevating Hospitality and Dining
         </h3>
       </div>
-      <div className="flex justify-center pt-5 pb-2">
-        <p className="text-2xl">Follow us</p>
-      </div>
-      <div className="flex flex-row justify-center pt-2">
-        <p className="px-5 text-2xl nav-item">
-          <a href="https://www.facebook.com/people/Prestige-Lodge/61562480964147/">
-            Facebook
-          </a>
-        </p>
-        <p className="px-8 nav-item text-2xl">
-          <a href="https://x.com/prestigelodge">X</a>
-        </p>
-        <p className="px-5 text-2xl nav-item">
-          <a href="https://www.linkedin.com/company/prestige-lodge">
-            Linked In
-          </a>
-        </p>
-      </div>
+
       <div className="flex flex-col items-center py-5">
-        <p className="nav-item text-2xl">
-          <a href="https://www.prestigelodgedigital.com/">
-            www.prestigelodgedigital.com
-          </a>
-        </p>
         <p className="text-2xl">Piraeus, Athens - Greece</p>
       </div>
       <div className="flex flex-col items-center py-5">

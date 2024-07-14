@@ -6,26 +6,51 @@ export default function Page() {
     <>
       <Header />
       <Intro />
-      <CTA />
-      <div className="flex flex-col py-8 lg:px-[20%] xl:px-[35%] 3xl:px-[40%]">
+      <CTA displayImages={true} />
+
+      <div className="pt-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl text-center pt-3">
+          Hot to get more customers or grow your business?
+        </h1>
+      </div>
+
+      <div className="flex flex-col justify-center md:flex-row py-8 lg:px-[10%] xl:px-[17%] 3xl:px-[25%]">
         <div className="flex flex-col justify-center px-5">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center pt-3">
-            Marketing is important.
+          <h1 className="text-3xl sm:text-4xl text-center pt-3">
+            Handle marketing tasks?
           </h1>
-          <p className="text-center text-xl">
-            Utilizing various marketing techniques is the best way to approach
-            customers. It is another important task that requires a lot of
-            effort and time...
+          <p className="text-center text-xl lg:text-2xl py-8">
+            You know that marketing is crucial but you know that you have other
+            responsibilities.
+          </p>
+          <p className="text-center text-xl lg:text-2xl pb-8">
+            It can be overwhelming and you can't be mainly focused on it.
           </p>
         </div>
-        <div className="flex flex-col justify-center px-5 lg:pt-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center pt-3">
-            Another task to consider!
+        <div className="flex flex-col justify-center px-5">
+          <h1 className="text-3xl sm:text-4xl text-center pt-3">
+            Hire marketing staff?
           </h1>
-          <p className="text-center text-xl">
-            Running a hospitality business has you fully occupied, with a lot of
-            important tasks. You can relieve yourself from that stress by having
-            somebody else handling that.
+          <p className="text-center text-xl lg:text-2xl py-8">
+            Finding specialized staff is time consuming. They also need
+            training, which it can be expensive.
+          </p>
+          <p className="text-center text-xl lg:text-2xl pb-8">
+            You'll rely on one person and if it's not the right person, you have
+            to start over again.
+          </p>
+        </div>
+        <div className="flex flex-col justify-center px-5">
+          <h1 className="text-3xl sm:text-4xl text-center pt-3">
+            Hire a marketing agency?
+          </h1>
+          <p className="text-center text-xl lg:text-2xl py-8">
+            A marketing agency sounds like a good solution. But if you do not
+            have a big budget...
+          </p>
+          <p className="text-center text-xl lg:text-2xl pb-8">
+            An intern or a junior employee will handle your business. Not
+            optimal for you, but for them.
           </p>
         </div>
       </div>
@@ -34,23 +59,22 @@ export default function Page() {
         <div className="max-w-screen-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div className="grid grid-cols-1 max-w-3xl gap-y-8 lg:items-center">
             <div className="mx-auto text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
-              <h2 className="text-3xl font-bold sm:text-4xl">
-                How will you achieve your goals?
+              <h2 className="text-3xl sm:text-4xl">
+                What is an effective solution then?
               </h2>
-
-              <p className="mt-4 text-text text-xl">
-                When it comes to marketing there are many approaches to reaching
-                your goals. Focus on the many tasks already occupying your
-                schedule. Let us handle your marketing for you, freeing you
-                time!
+              <p className="mt-4 text-text text-xl lg:text-2xl">
+                Collaborate with a marketing team that cares about your results,
+                that is specialized in the hospitality industry, and that is
+                local and easy to approach!
               </p>
-
-              <a
-                href="/contactus"
-                className="mt-8 inline-block text-xl rounded border border-current px-8 py-3 font-medium text-text transition hover:scale-110 bg-amber-200 hover:shadow-xl focus:outline-none focus:ring active:text-amber-200"
-              >
-                Get In Touch!
-              </a>
+              <div className="flex justify-center">
+                <a
+                  href="/contactus"
+                  className="mt-8 inline-block text-xl rounded border border-current px-8 py-3 font-medium text-text transition hover:scale-110 bg-amber-200 hover:shadow-xl focus:outline-none focus:ring active:text-amber-200"
+                >
+                  Get In Touch!
+                </a>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
@@ -82,7 +106,7 @@ export default function Page() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 text-2xl text-center font-bold sm:text-3xl">
+                <h2 className="mt-2 text-2xl text-center sm:text-3xl">
                   Websites
                 </h2>
 
@@ -110,7 +134,7 @@ export default function Page() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 text-xl text-center font-bold sm:text-3xl">
+                <h2 className="mt-2 text-xl text-center sm:text-3xl">
                   Marketing
                 </h2>
 
@@ -144,7 +168,7 @@ export default function Page() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 text-xl text-center font-bold sm:text-3xl">
+                <h2 className="mt-2 text-xl text-center sm:text-3xl">
                   Online presence
                 </h2>
 
@@ -177,9 +201,7 @@ export default function Page() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 text-xl text-center font-bold sm:text-3xl">
-                  Local
-                </h2>
+                <h2 className="mt-2 text-xl text-center sm:text-3xl">Local</h2>
 
                 <p className="text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
                   We're local and directly approachable.
@@ -207,7 +229,7 @@ export default function Page() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 text-xl text-center font-bold sm:text-3xl">
+                <h2 className="mt-2 text-xl text-center sm:text-3xl">
                   Result - Driven
                 </h2>
 
@@ -235,7 +257,7 @@ export default function Page() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 text-xl text-center font-bold sm:text-3xl">
+                <h2 className="mt-2 text-xl text-center sm:text-3xl">
                   Guarantee
                 </h2>
 

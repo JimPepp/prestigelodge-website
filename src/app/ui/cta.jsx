@@ -1,14 +1,22 @@
 import Image from "next/image";
 
-export default function CTA() {
+export default function CTA({displayImages}) {
+  let hideImages = " hidden "
+  let showGrid = " "
+
+  if (displayImages){
+    hideImages = " ";
+    showGrid = " grid grid-cols-1 gap-4 md:grid-cols-2 ";
+  }
+
   return (
     <>
       <section>
-        <div className="max-w-screen-3xl">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="max-w-screen-3xl px-4">
+          <div className={`${showGrid}`}>
             <div className="flex flex-col justify-center p-8 md:p-12 lg:px-16 lg:py-24">
               <div className="mx-auto max-w-xl text-center">
-                <h2 className="text-2xl font-bold text-text md:text-3xl">
+                <h2 className="text-2xl text-text md:text-3xl">
                   Focus on what you do best!
                 </h2>
 
@@ -30,13 +38,13 @@ export default function CTA() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className={`${hideImages} grid grid-cols-2 gap-4`}>
               <Image
                 width={500}
                 height={500}
                 alt=""
                 src="/images/MeetingRoom.png"
-                className="h-40 w-full object-cover sm:h-56 md:h-full"
+                className="h-40 w-full object-cover sm:h-56 md:h-128"
               />
 
               <Image
@@ -44,7 +52,7 @@ export default function CTA() {
                 height={500}
                 alt=""
                 src="/images/restaurant-pexels.png"
-                className="h-40 w-full object-cover sm:h-56 md:h-full"
+                className="h-40 w-full object-cover sm:h-56 md:h-128"
               />
             </div>
           </div>
