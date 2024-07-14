@@ -290,13 +290,14 @@ export default function Header() {
               <h2 className="text-xl lg:text-3xl">Hotels</h2>
             </div>
             <Image
-              className="relative"
+              className="relative object-cover object-center"
               id="menuImage"
               src="/images/hotel-pool-pexels.png"
               // fill = true adjusts the image dimations to the div
               // use along-side with object-fit and object-position for correct aspect ratio!
               // check : golbals.css @ .menu-image>img
               fill={true}
+              sizes="(min-width: 1024px) 100vw, 33vw"
               alt="Picture of a pool in a hotel, surrounded by a spruce deck. Various trees behind the deck and sea in the far background"
             />
           </section>
@@ -314,6 +315,7 @@ export default function Header() {
               // use along-side with object-fit and object-position for correct aspect ratio!
               // check : golbals.css @ .menu-image>img
               fill={true}
+              sizes="(max-width: 768px) 80vw, (max-width: 1200px) 100vw, 33vw"
               alt="Picture of a nice restaurant next to a marina. Yachts on the background. The restaurant has wooden chairs with blue cloth on the cushions, and wooden tables with light blue decorations."
             />
           </section>
@@ -331,6 +333,7 @@ export default function Header() {
               // use along-side with object-fit and object-position for correct aspect ratio!
               // check : golbals.css @ .menu-image>img
               fill={true}
+              sizes="(max-width: 768px) 80vw, (max-width: 1200px) 100vw, 33vw"
               alt="Picture of a coffee shop, with white marble on top of the bar. A display of various ingredients to makek beverages. Gold decorations on a white wall."
             />
           </section>
@@ -348,6 +351,7 @@ export default function Header() {
               // use along-side with object-fit and object-position for correct aspect ratio!
               // check : golbals.css @ .menu-image>img
               fill={true}
+              sizes="(max-width: 768px) 80vw, (max-width: 1200px) 100vw, 33vw"
               alt="Picture of a bar, surrounded by stools. Coasy atmosphere and a display of bottles with various alcoholic drinks."
             />
           </section>

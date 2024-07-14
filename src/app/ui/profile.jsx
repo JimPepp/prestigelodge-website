@@ -1,15 +1,10 @@
 'use client'
 import Image from "next/image";
-import { use, useEffect } from "react";
 export default function Profile({ name, info, img, left, email }) {
   let reverse = "";
 
   if (left === true) reverse = "lg:flex-row";
   else reverse = "lg:flex-row-reverse";
-
-  useEffect(() => {
-    console.log(name + " | " + left);
-  });
 
   return (
     <>

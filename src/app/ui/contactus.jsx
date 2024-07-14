@@ -150,7 +150,7 @@ export default function Contact() {
                 setMessage(e.target.value);
               }}
             />
-            <button class="max-w-40 inline-block text-xl rounded border border-current px-8 py-3 font-medium text-text transition hover:scale-110 bg-amber-200 hover:shadow-xl focus:outline-none focus:ring active:text-amber-200">
+            <button className="max-w-40 inline-block text-xl rounded border border-current px-8 py-3 font-medium text-text transition hover:scale-110 bg-amber-200 hover:shadow-xl focus:outline-none focus:ring active:text-amber-200">
               <p
                 className={`${Fh2h3.className} `}
               >{`${buttonText.valueOf()}`}</p>
