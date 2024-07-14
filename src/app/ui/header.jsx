@@ -246,17 +246,17 @@ export default function Header() {
         <div className="w-full flex flex-row-reverse items-center sm:pl-24 sm:pr-24 pl-8 pr-8 flex-nowrap m-0 p-0 border-2 header">
           <div className="w-full flex logo">
             <h1 className={`${Fh1.className} text-5xl sm:text-6xl`}>
-              Prestige Lodge
+              <a href="/">Prestige Lodge</a>
             </h1>
           </div>
-          <div className="flex flex-row items-center justify-center">
-            <button className="cursor-pointer pr-4" id="burgerIcon">
+          <div className="flex flex-row items-center justify-center" id="burgerIcon">
+            <button className="cursor-pointer pr-4">
               <div className=" w-8 my-2 rounded line line1"></div>
               <div className=" w-8 my-2 rounded line line2"></div>
               <div className=" w-8 my-2 rounded line line3"></div>
             </button>
             <h4
-              className={`${Fh2h3.className} hidden lg:flex text-2xl md:text-4xl`}
+              className={`${Fh2h3.className} hidden cursor-pointer lg:flex text-2xl md:text-4xl`}
               id="menuText"
             >
               menu

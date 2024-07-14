@@ -86,7 +86,7 @@ export default function Page() {
                   Websites
                 </h2>
 
-                <p class="hidden text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
+                <p class="text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
                   Completely tailored to your business.
                 </p>
               </a>
@@ -114,7 +114,7 @@ export default function Page() {
                   Marketing
                 </h2>
 
-                <p class="hidden text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
+                <p class="text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
                   More attention, more customers!
                 </p>
               </a>
@@ -125,6 +125,7 @@ export default function Page() {
               >
                 <span class="flex justify-center rounded-lg p-3">
                   <svg
+                    class="w-6 h-6 lg:w-10 lg:h-10"
                     xmlns="http://www.w3.org/2000/svg"
                     width="45"
                     height="45"
@@ -147,7 +148,7 @@ export default function Page() {
                   Online presence
                 </h2>
 
-                <p class="hidden text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
+                <p class="text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
                   Your social media and brand impact!
                 </p>
               </a>
@@ -180,7 +181,7 @@ export default function Page() {
                   Local
                 </h2>
 
-                <p class="hidden text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
+                <p class="text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
                   We're local and directly approachable.
                 </p>
               </a>
@@ -191,6 +192,7 @@ export default function Page() {
               >
                 <span class="flex justify-center rounded-lg p-3">
                   <svg
+                    class="w-6 h-6 lg:w-10 lg:h-10"
                     xmlns="http://www.w3.org/2000/svg"
                     width="45"
                     height="45"
@@ -209,7 +211,7 @@ export default function Page() {
                   Result - Driven
                 </h2>
 
-                <p class="hidden text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
+                <p class="text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
                   Bringing you results is our sole priority!
                 </p>
               </a>
@@ -237,7 +239,7 @@ export default function Page() {
                   Guarantee
                 </h2>
 
-                <p class="hidden text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
+                <p class="text-center sm:mt-1 sm:block sm:text-xl sm:text-text opacity-85">
                   You don't have to bear all the risk.
                 </p>
               </a>

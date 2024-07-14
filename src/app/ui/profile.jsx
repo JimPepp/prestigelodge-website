@@ -17,9 +17,9 @@ export default function Profile({ name, info, img, left, email }) {
         className={`flex flex-col-reverse ${reverse} justify-center items-center text-center py-5`}
       >
         <div className="p-10">
-          <p className="text-xl lg:text-3xl">{name}</p>
-          <p className="text-base lg:text-xl">{info}</p>
-          <p className="text-base lg:text-xl">{email}</p>
+          <p className="text-3xl lg:text-4xl">{name}</p>
+          <p className="text-xl lg:text-2xl">{info}</p>
+          <p className="text-xl lg:text-2xl">{email}</p>
         </div>
         <div className=" rounded-full">
           <Image

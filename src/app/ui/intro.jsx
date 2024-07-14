@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Intro() {
   return (
     <>
-      <div>
+      <div className="flex justify-center items-center pb-32 flex-col">
         <video
           autoPlay
           muted
@@ -22,16 +22,16 @@ export default function Intro() {
         </video>
         <div className="block lg:hidden">
           <Image
-            src="/images/jungle-pool.jpg"
+            src="/images/Tables.png"
             width={1500}
             height={300}
             alt="A woman relaxing in a luxurious hotel pool in the jungle."
             priority={true}
-            className="object-cover max-h-96"
+            className="object-cover object-top max-h-96"
           />
         </div>
         <h1
-          className={`${Fh2h3.className} block top-[25%] sm:text-xl lg:text-4xl intro-txt-title overlay-txt text-center w-full lg:w-1/2 px-8 lg:p-0`}
+          className={`${Fh2h3.className} mt-10 top-[35%] text-2xl sm:text-3xl lg:text-4xl text-center w-full lg:w-1/2 px-8 lg:p-0 4xl:top-[15%]`}
         >
           Increase attention towards your hospitality business
         </h1>

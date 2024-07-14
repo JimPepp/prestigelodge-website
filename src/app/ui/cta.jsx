@@ -9,7 +9,7 @@ export default function CTA() {
             <div class="flex flex-col justify-center p-8 md:p-12 lg:px-16 lg:py-24">
               <div class="mx-auto max-w-xl text-center">
                 <h2 class="text-2xl font-bold text-text md:text-3xl">
-                  Focus on what you do best! <br></br> We'll do the rest!
+                  Focus on what you do best!
                 </h2>
 
                 <p class="text-text/90 sm:mt-4 text-xl lg:text-2xl sm:block">

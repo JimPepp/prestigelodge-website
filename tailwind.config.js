@@ -15,7 +15,8 @@ module.exports = {
       screens: {
         'short': { 'raw': '(max-height: 600px)'},
         'xs': { 'raw': '(max-width: 374px)' },
-        '3xl' : { 'raw': '(min-width: 2000px)' }
+        '3xl' : { 'raw': '(min-width: 2000px)' },
+        '4xl' : { 'raw': '(min-width: 3500px)' }
       },
       colors: {
         text: '#27201B',

@@ -95,18 +95,18 @@ export default function Contact() {
         <h1 className="text-3xl md:text-4xl lg:text-6xl">Contact Us</h1>
       </div>
       <div className={`${Fh2h3.className} flex justify-center`}>
-        <h3 className="text-base md:text-xl lg:text-2xl">
+        <h3 className="text-2xl lg:text-3xl">
           Interested in doing business?
         </h3>
       </div>
       <div className="flex flex-row py-4">
         <div className="flex flex-col w-full items-center">
-          <h6 className={`${Fh4h5.className} text-base md:text-xl lg:text-2xl`}>
+          <h6 className={`${Fh4h5.className} text-2xl lg:text-3xl`}>
             Send us an email
           </h6>
           <form className="flex flex-col py-4 text-xl" onSubmit={handleSubmit}>
             <label htmlFor="fullname" className=" text-text">
-              Full Name<span className="text-red-600">*</span> :
+              Name<span className="text-red-600">*</span>
             </label>
             <input
               type="text"
@@ -117,7 +117,7 @@ export default function Contact() {
               }}
             />
             <label htmlFor="email" className=" text-text">
-              Email<span className="text-red-600">*</span> :
+              Email<span className="text-red-600">*</span>
             </label>
             <input
               type="email"
@@ -128,7 +128,7 @@ export default function Contact() {
               }}
             />{" "}
             <label htmlFor="subject" className=" text-text">
-              Subject<span className="text-red-600">*</span> :
+              Subject<span className="text-red-600">*</span>
             </label>
             <input
               type="text"
@@ -139,7 +139,7 @@ export default function Contact() {
               }}
             />
             <label htmlFor="message" className=" text-text">
-              Message<span className="text-red-600">*</span> :
+              Message<span className="text-red-600">*</span>
             </label>
             <textarea
               type="text"
@@ -161,14 +161,14 @@ export default function Contact() {
       </div>
       <div className="flex items-center py-4 flex-col">
         <h6
-          className={`${Fh4h5.className} text-center text-lg md:text-xl lg:text-2xl pt-10`}
+          className={`${Fh4h5.className} text-center text-2xl lg:text-3xl pt-10`}
         >
           or give us a call
         </h6>
         <p
-          className={`${Fparagraph.className} text-center text-base md:text-lg lg:text-xl py-8 w-3/6`}
+          className={`${Fparagraph.className} text-center text-xl md:text-lg lg:text-2xl py-8 w-3/6`}
         >
-          Atlternatively, you may reach out to us directly at (+30) 694 353 1213
+          Alternatively, you may reach out to us directly at (+30) 694 353 1213
           for immediate assistance with any inquiries. We look forward to working 
           with you.
         </p>
