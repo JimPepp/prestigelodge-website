@@ -7,54 +7,50 @@ export default function Page() {
       <Header />
       <Intro />
       <CTA displayImages={true} />
-
       <div className="pt-8">
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-center pt-3">
           Hot to get more customers or grow your business?
         </h1>
       </div>
 
-      <div className="flex flex-col justify-center md:flex-row py-8 lg:px-[10%] xl:px-[17%] 3xl:px-[25%]">
-        <div className="flex flex-col justify-center px-5">
-          <h1 className="text-3xl sm:text-4xl text-center pt-3">
-            Handle marketing tasks?
+      <div className="flex flex-col lg:flex-row justify-center 2xl:px-40 hd:px-60 3xl:px-[20%]">
+        <div className="flex justify-start items-center flex-col m-8">
+          <h1 className="text-3xl sm:text-4xl text-center pb-8">
+            Handle marketing tasks yourself
           </h1>
-          <p className="text-center text-xl lg:text-2xl py-8">
+          <p className="text-center text-xl lg:text-2xl pb-8">
             You know that marketing is crucial but you know that you have other
             responsibilities.
           </p>
-          <p className="text-center text-xl lg:text-2xl pb-8">
+          <p className="text-center text-xl lg:text-2xl">
             It can be overwhelming and you can't be mainly focused on it.
           </p>
         </div>
-        <div className="flex flex-col justify-center px-5">
-          <h1 className="text-3xl sm:text-4xl text-center pt-3">
-            Hire marketing staff?
+        <div className="flex justify-start items-center flex-col m-8">
+          <h1 className="text-3xl sm:text-4xl text-center pb-8">
+            Hire your own marketing staff
           </h1>
-          <p className="text-center text-xl lg:text-2xl py-8">
-            Finding specialized staff is time consuming. They also need
-            training, which it can be expensive.
-          </p>
           <p className="text-center text-xl lg:text-2xl pb-8">
-            You'll rely on one person and if it's not the right person, you have
-            to start over again.
+            Hiring specialized staff is time consuming. They also need expensive
+            training.
+          </p>
+          <p className="text-center text-xl lg:text-2xl">
+            You'll rely on one person, but if it's not you start over again.
           </p>
         </div>
-        <div className="flex flex-col justify-center px-5">
-          <h1 className="text-3xl sm:text-4xl text-center pt-3">
-            Hire a marketing agency?
+        <div className="flex justify-start items-center flex-col m-8">
+          <h1 className="text-3xl sm:text-4xl text-center pb-8">
+            Hire an external marketing agency
           </h1>
-          <p className="text-center text-xl lg:text-2xl py-8">
+          <p className="text-center text-xl lg:text-2xl pb-8">
             A marketing agency sounds like a good solution. But if you do not
             have a big budget...
           </p>
-          <p className="text-center text-xl lg:text-2xl pb-8">
-            An intern or a junior employee will handle your business. Not
-            optimal for you, but for them.
+          <p className="text-center text-xl lg:text-2xl">
+            An intern or a junior employee will handle your business.
           </p>
         </div>
       </div>
-
       <section className="flex justify-center">
         <div className="max-w-screen-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div className="grid grid-cols-1 max-w-3xl gap-y-8 lg:items-center">
@@ -269,7 +265,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
       <CTA />
       <Footer />
     </>
