@@ -204,7 +204,7 @@ h6 {
 /* INTRO COMPONENT */
 /* ================ */
 
-.sm-video{
+.sm-video {
   object-fit: cover;
   object-position: 0% 50%;
 }
@@ -340,7 +340,7 @@ input:focus,
     SERVICES
     ======== */
 
-.scroll-section-outer{
+.scroll-section-outer {
   overflow: hidden;
 }
 
@@ -356,4 +356,23 @@ input:focus,
   height: 100vh;
   width: 100vw;
   display: flex;
+}
+
+.solutionSection {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: auto;
+  height: auto;
+}
+
+.solutionSection::before {
+  content: "";
+  background-image: url("/images/coffee-shop-pexels.png");
+  background-size: cover;
+  opacity: 0.3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
 }

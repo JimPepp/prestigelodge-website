@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="flex flex-col items-center py-5">
         <p className="text-2xl">Piraeus, Athens - Greece</p>
       </div>
-      {/* <div className="flex flex-col items-center py-5">
+      <div className="flex flex-col items-center py-5">
         <p className=" text-secondary text-3xl">SITEMAP</p>
         <div className="w-[20%] md:w-[10%] lg:w-[10%] 3xl:max-w-[3%] h-0.5 bg-text"></div>
         <div className=" flex flex-col items-center text-2xl pt-4">
@@ -37,7 +37,7 @@ export default function Footer() {
             Contact us
           </a>
         </div>
-      </div> */}
+      </div>
       <div className="flex flex-col items-center text-center py-5 text-2xl">
         <p>© 2024 Prestige Lodge. All rights reserved.</p>
       </div>
